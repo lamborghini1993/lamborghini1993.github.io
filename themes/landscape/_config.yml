@@ -2,7 +2,6 @@
 menu:
   Home: /
   Archives: /archives
-  Board: /board
 rss: /atom.xml
 
 # Content
@@ -31,7 +30,7 @@ show_count: false
 # Miscellaneous
 google_analytics:
 gauges_analytics:
-favicon: /favicon.png
+favicon: /image/background.jpg
 twitter:
 google_plus:
 fb_admins:
