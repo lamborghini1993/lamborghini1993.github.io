@@ -361,8 +361,8 @@ baidu_analytics: 41fc030db57d5570dd22f78997dc4a7e
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: xiaohao
   count: true
 
 # Hypercomments
@@ -396,7 +396,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC80MTQxNC8xNzk2MQ==
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
@@ -419,7 +419,7 @@ gitment:
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-#baidushare:
+baidushare: true
 ##  type: button
 
 # Share
