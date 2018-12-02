@@ -93,5 +93,7 @@
   	 {% include '_scripts/lean-analytics.swig' %}
   {%  endif %}
 
+  {% include '_third-party/comments/livere.swig' %}
+
 </body>
 </html>
