@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+<!doctype html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Blog">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="">
+
+    
+
+    <title>
+        
+        Qt实现代码折叠 |
+        
+        Xiao❤Hao
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Plugin CSS -->
+
+
+    <!-- Custom CSS -->
+    <!-- ↓这是stylus文件 -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/toc.css">
+
+
+</head>
+<body></body>
+</html>
+
+<body>
+
+<!-- Header -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header {
+     background-image: url('');
+        /*post*/
+    
+    }
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- 文章 -->
+                
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>Qt实现代码折叠</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                            Posted by XiaoHao on
+                        2018-12-02
+                        </span>
+                </div>
+                <!-- 非文章 -->
+                
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Nav -->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Xiao❤Hao</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li><a href="/">Home</a></li>
+                    
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    
+                    <li><a href="/about">About</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Content -->
+<!-- Content -->
+<div class="container">
+    <div class="row">
+        <!-- Post container -->
+
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+
+            <h1 id="一、控件"><a href="#一、控件" class="headerlink" title="一、控件"></a>一、控件</h1><ul>
+<li>QPlainTextEdit ：加载代码，以及使用 QTextBlock针对每行进行处理，比如高亮、隐藏setVisible (False)等，而QTextEdit 默认的 DocumentLayout 不支持隐藏 QTextBlock 。</li>
+<li>QPushButton：添加折叠、展开两个按钮，方便测试。</li>
+</ul>
+<h1 id="二、界面"><a href="#二、界面" class="headerlink" title="二、界面"></a>二、界面</h1><p><img src="./../image/1533090127.png" alt="1533090127"></p>
+<ul>
+<li>只是测试改功能，所以用Qtdesigner写了个简易的界面。</li>
+<li>QPlainTextEdit 继承自定义的类CMyText。</li>
+<li>直接加载代码，然后点击折叠、展开触发操作。</li>
+</ul>
+<h1 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtWidgets, QtCore, QtGui</span><br><span class="line"></span><br><span class="line">FILE = <span class="string">r"E:\mygithub\FileCompare\test\py2ui.txt"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CMyText</span><span class="params">(QtWidgets.QPlainTextEdit)</span>:</span></span><br><span class="line">    m_Start = <span class="number">10</span></span><br><span class="line">    m_End = <span class="number">50</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></span><br><span class="line">        super(CMyText, self).__init__(parent)</span><br><span class="line">        self.InitUI()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">InitUI</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.setLineWrapMode(QtWidgets.QPlainTextEdit.NoWrap)</span><br><span class="line">        <span class="keyword">with</span> open(FILE, <span class="string">"r"</span>, encoding=<span class="string">"utf8"</span>) <span class="keyword">as</span> fp:</span><br><span class="line">            lstLines = fp.readlines()</span><br><span class="line">            lst = []</span><br><span class="line">            <span class="keyword">for</span> i, line <span class="keyword">in</span> enumerate(lstLines):</span><br><span class="line">                lst.append(<span class="string">"%s-%s"</span> % (i, line)) <span class="comment"># 添加行号，方便直观观察</span></span><br><span class="line">            self.setPlainText(<span class="string">""</span>.join(lst))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">E_Fold</span><span class="params">(self)</span>:</span></span><br><span class="line">        document = self.document()</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(self.m_Start + <span class="number">1</span>, self.m_End + <span class="number">1</span>):</span><br><span class="line">            oTextBlock = document.findBlockByNumber(x)</span><br><span class="line">            oTextBlock.setVisible(<span class="keyword">False</span>)	<span class="comment"># 隐藏</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">E_Unfold</span><span class="params">(self)</span>:</span></span><br><span class="line">        document = self.document()</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(self.m_Start + <span class="number">1</span>, self.m_End + <span class="number">1</span>):</span><br><span class="line">            oTextBlock = document.findBlockByNumber(x)</span><br><span class="line">            oTextBlock.setVisible(<span class="keyword">True</span>)		<span class="comment"># 显示</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>这是按照直观想法写出的代码，自然而然想到，隐藏直接将对应的块设置为不可见。</li>
+</ul>
+<h1 id="四、实际效果花屏问题："><a href="#四、实际效果花屏问题：" class="headerlink" title="四、实际效果花屏问题："></a>四、实际效果花屏问题：</h1><p><img src="./../image/10-31-43-8-1-3074.gif" alt="10-31-43-8-1-3074"></p>
+<ul>
+<li><p>可以看到点击之后并不会理解隐藏11-50行。</p>
+</li>
+<li><p>滑动之后才会隐藏，而且滑下去时其实还是经过了11-50行，可以看到再滑上来时，花屏了加载了好几次51行。</p>
+</li>
+<li><p>原因：</p>
+<ul>
+<li><p>点击没反应：点击虽然调用了隐藏，但是界面并没有重绘，所以还需要调用<code>self.viewport().update()</code>，展开时也一样。</p>
+</li>
+<li><p>滚动花屏：滚动时也应该调用<code>self.viewport().update()</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">scrollContentsBy</span><span class="params">(self, dx, dy)</span>:</span></span><br><span class="line">    self.viewport().update()</span><br><span class="line">    super(CMyText, self).scrollContentsBy(dx, dy)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="五、滚动的另一个问题。"><a href="#五、滚动的另一个问题。" class="headerlink" title="五、滚动的另一个问题。"></a>五、滚动的另一个问题。</h1><p><img src="./../image/11-0-40-8-1-8746.gif" alt="11-0-40-8-1-8746"></p>
+<ul>
+<li><p>此时点击立刻隐藏了，但是滑动到10行继续玩下滑动时，滚动条正常向下滑动，代码并没有向下滑，而是过了一段时间才开始滚动。</p>
+</li>
+<li><p>原因：猜想代码其实还是包括隐藏的行，所以滚动时还是会滚过这些隐藏的行。</p>
+</li>
+<li><p>解决：在折叠、展开时调用<code>document.adjustSize()</code>即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">E_Fold</span><span class="params">(self)</span>:</span></span><br><span class="line">    document = self.document()</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(self.m_Start + <span class="number">1</span>, self.m_End + <span class="number">1</span>):</span><br><span class="line">        oTextBlock = document.findBlockByNumber(x)</span><br><span class="line">        oTextBlock.setVisible(<span class="keyword">False</span>)</span><br><span class="line">    self.viewport().update()</span><br><span class="line">    document.adjustSize()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>此时完美运行代码折叠、展开。可以继续做自己想做的效果了。</p>
+</li>
+</ul>
+
+
+
+            <!-- Pager -->
+            <ul class="pager">
+                
+                
+                <li class="next">
+                    <a href="/2018-12-02 hello-world/">Next Post &rarr;</a>
+                </li>
+                
+            </ul>
+
+
+
+        </div>
+        <!-- Sidebar container-->
+        <div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+            <!-- toc -->
+            <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top" role="complementary">
+                <h4><i class="fa fa-bookmark"></i> Catalog</h4>
+                <ul class="nav bs-docs-sidenav">
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Xiao❤Hao 2018
+                    <br>
+                    Theme by <a href="http://beantech.org/">Bean Tech</a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://lamborghini1993.github.io">Xiao❤Hao</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/script.js"></script>
+
+
+
+
+</body>
+</html>
