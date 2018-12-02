@@ -94,7 +94,7 @@ index_with_subtitle: false
 menu:
   home: / || home
   #about: /about/ || user
-  #tags: /tags/ || tags
+  tags: /tags/ || tags
   #categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
@@ -113,8 +113,8 @@ menu_icons:
 # Schemes
 # scheme: Muse
 # scheme: Mist
-# scheme: Pisces
-scheme: Gemini
+scheme: Pisces
+# scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -154,7 +154,7 @@ links_layout: block
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
+avatar: /picture/Head.png
 
 # Table Of Contents in the Sidebar
 toc:
@@ -353,7 +353,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 41fc030db57d5570dd22f78997dc4a7e
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -531,9 +531,9 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: xO8AfCMOcVBcJsQlSpcxta7h-gzGzoHsz
+  app_key: fux0nAIKeK8hj5Be7CVWIhBJ
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
