@@ -361,7 +361,7 @@ baidu_analytics: 41fc030db57d5570dd22f78997dc4a7e
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname: xiaohao
   count: true
 
