@@ -88,12 +88,5 @@
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
-
-  {% if theme.leancloud_visitors.enable %}
-  	 {% include '_scripts/lean-analytics.swig' %}
-  {%  endif %}
-
-  {% include '_third-party/comments/livere.swig' %}
-
 </body>
 </html>
