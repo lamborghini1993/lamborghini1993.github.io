@@ -1,8 +1,9 @@
 ---
 title: Git submodlue使用和一键配置
 date: 2018-12-05 19:42:15
-categories：
+categories:
 - git
+- submodlue
 tags:
 - git
 - submodlue

@@ -1,10 +1,13 @@
 ---
 title: Qt实现代码折叠
 date: 2018-12-02 13:15:07
+categories:
+- python
+- PyQt5
 tags:
 - PyQt5
-- 代码折叠
 ---
+
 # 一、控件
 
 - QPlainTextEdit ：加载代码，以及使用 QTextBlock针对每行进行处理，比如高亮、隐藏setVisible (False)等，而QTextEdit 默认的 DocumentLayout 不支持隐藏 QTextBlock 。
