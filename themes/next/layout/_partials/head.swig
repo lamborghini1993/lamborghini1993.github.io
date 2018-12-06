@@ -31,10 +31,6 @@
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-{% if theme.baidu_site_verification %}
-  <meta name="baidu-site-verification" content="nsr422yhpo" />
-{% endif %}
-
 {% if theme.google_site_verification %}
   <meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
 {% endif %}
@@ -49,7 +45,7 @@
 
 
 {% if theme.baidu_site_verification %}
-  <meta name="baidu-site-verification" content="{{ theme.baidu_site_verification }}" />
+  <meta name="baidu-site-verification" content="nsr422yhpo" />
 {% endif %}
 
 
