@@ -9,7 +9,7 @@ tags:
 - submodlue
 ---
 
-# Git submodlue介绍
+# Git submodule介绍
 经常碰到这种情况：当你在一个Git 项目上工作时，你需要在其中使用另外一个Git 项目。也许它是一个第三方开发的Git 库或者是你独立开发和并在多个父项目中使用的。这个情况下一个常见的问题产生了：你想将两个项目单独处理但是又需要在其中一个中使用另外一个。
 
 在Git 中你可以用子模块`submodule`来管理这些项目，`submodule`允许你将一个Git 仓库当作另外一个Git 仓库的子目录。这允许你克隆另外一个仓库到你的项目中并且保持你的提交相对独立。
@@ -200,7 +200,7 @@ remote: Total 2 (delta 1), reused 2 (delta 1), pack-reused 0
 Fast-forward
  Test | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
- 
+
 ➜  other2 git:(master) git status 
 位于分支 master
 您的分支与上游分支 'origin/master' 一致。
