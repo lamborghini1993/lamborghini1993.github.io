@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://www.lamborghini1993.xyz
+url: lamborghini1993.xyz
 root: /
 permalink: :year-:month-:day :title/
 permalink_defaults:
@@ -78,6 +78,11 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo: https://github.com/lamborghini1993/lamborghini1993.github.io.git
   branch: master
+
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
