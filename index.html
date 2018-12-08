@@ -24,7 +24,7 @@
 <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-  <meta name="google-site-verification" content="true">
+  <meta name="google-site-verification" content="Ghr6aD252GAMqEPJWrLtK8o9tJM55LpSUnCdvJ39d-4">
 
 
 
@@ -129,7 +129,7 @@
 <meta name="description" content="If you don&apos;t leave me,we will die together!">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Xiao❤Hao">
-<meta property="og:url" content="https://www.lamborghini1993.xyz/index.html">
+<meta property="og:url" content="lamborghini1993.xyz/index.html">
 <meta property="og:site_name" content="Xiao❤Hao">
 <meta property="og:description" content="If you don&apos;t leave me,we will die together!">
 <meta property="og:locale" content="zh-Hans">
@@ -165,7 +165,7 @@
 
 
 
-  <link rel="canonical" href="https://www.lamborghini1993.xyz/">
+  <link rel="canonical" href="lamborghini1993.xyz/">
 
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.lamborghini1993.xyz/2018-12-05 Git-submodlue使用和一键配置/">
+    <link itemprop="mainEntityOfPage" href="lamborghini1993.xyz/2018-12-08 LeetCode-001-two-sum/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XiaoHao">
@@ -318,7 +318,185 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018-12-05 Git-submodlue使用和一键配置/" itemprop="url">Git submodlue使用和一键配置</a></h1>
+                <a class="post-title-link" href="/2018-12-08 LeetCode-001-two-sum/" itemprop="url">LeetCode-001-two-sum</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-08T13:04:49+08:00">
+                2018-12-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018-12-08 LeetCode-001-two-sum/" class="leancloud_visitors" data-flag-title="LeetCode-001-two-sum">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h1><ul>
+<li>英文：<a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">https://leetcode.com/problems/two-sum/</a></li>
+<li>中文：<a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/two-sum/</a></li>
+</ul>
+<h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
+<h1 id="解题思路一："><a href="#解题思路一：" class="headerlink" title="解题思路一："></a>解题思路一：</h1><p>双重循环遍历，判断nums[i] + nums[j] = target，很显然这种方式太暴力</p>
+<ul>
+<li>时间复杂度为O(N*N)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+<h1 id="解题思路二："><a href="#解题思路二：" class="headerlink" title="解题思路二："></a>解题思路二：</h1><p>竟然给定了target，我们就可以根据一个值求出另一个值<br>然后在判断这个值是否在nums数组中，即可。</p>
+<ul>
+<li>时间复杂度为O(N*M)</li>
+<li>空间复杂度：O(1)<figure class="highlight python"><figcaption><span>0</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">for</span> i, v <span class="keyword">in</span> enumerate(nums):</span><br><span class="line">            value = target - v</span><br><span class="line">            <span class="keyword">if</span> value <span class="keyword">not</span> <span class="keyword">in</span> nums:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            j = nums.index(value)</span><br><span class="line">            <span class="keyword">if</span> i != j:</span><br><span class="line">                <span class="keyword">return</span> [i, j]</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">None</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="解题思路三："><a href="#解题思路三：" class="headerlink" title="解题思路三："></a>解题思路三：</h1><p>在二的基础上，判断是否在数组中，可以遍历一次用字典存储起来，然后获取另一个值</p>
+<ul>
+<li>时间复杂度为O(N)</li>
+<li>空间复杂度：O(N)<figure class="highlight python"><figcaption><span>1</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        dInfo = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> x, xValue <span class="keyword">in</span> enumerate(nums):</span><br><span class="line">            yValue = target - xValue</span><br><span class="line">            <span class="keyword">if</span> yValue <span class="keyword">in</span> dInfo:</span><br><span class="line">                <span class="keyword">return</span> [dInfo[yValue], x]</span><br><span class="line">            dInfo[xValue] = x</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">None</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
+<li><a href="https://github.com/lamborghini1993/LeetCode" target="_blank" rel="noopener">https://github.com/lamborghini1993/LeetCode</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="lamborghini1993.xyz/2018-12-05 Git submodule使用和一键配置/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XiaoHao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/Head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao❤Hao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018-12-05 Git submodule使用和一键配置/" itemprop="url">Git submodule使用和一键配置</a></h1>
         
 
         <div class="post-meta">
@@ -381,7 +559,7 @@
 
           
           
-             <span id="/2018-12-05 Git-submodlue使用和一键配置/" class="leancloud_visitors" data-flag-title="Git submodlue使用和一键配置">
+             <span id="/2018-12-05 Git submodule使用和一键配置/" class="leancloud_visitors" data-flag-title="Git submodule使用和一键配置">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -414,7 +592,7 @@
       
         
           
-            <h1 id="Git-submodlue介绍"><a href="#Git-submodlue介绍" class="headerlink" title="Git submodlue介绍"></a>Git submodlue介绍</h1><p>经常碰到这种情况：当你在一个Git 项目上工作时，你需要在其中使用另外一个Git 项目。也许它是一个第三方开发的Git 库或者是你独立开发和并在多个父项目中使用的。这个情况下一个常见的问题产生了：你想将两个项目单独处理但是又需要在其中一个中使用另外一个。</p>
+            <h1 id="Git-submodule介绍"><a href="#Git-submodule介绍" class="headerlink" title="Git submodule介绍"></a>Git submodule介绍</h1><p>经常碰到这种情况：当你在一个Git 项目上工作时，你需要在其中使用另外一个Git 项目。也许它是一个第三方开发的Git 库或者是你独立开发和并在多个父项目中使用的。这个情况下一个常见的问题产生了：你想将两个项目单独处理但是又需要在其中一个中使用另外一个。</p>
 <p>在Git 中你可以用子模块<code>submodule</code>来管理这些项目，<code>submodule</code>允许你将一个Git 仓库当作另外一个Git 仓库的子目录。这允许你克隆另外一个仓库到你的项目中并且保持你的提交相对独立。</p>
 <h1 id="添加子模块"><a href="#添加子模块" class="headerlink" title="添加子模块"></a>添加子模块</h1><p>本文将统一使用<a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:lamborghini1993/Test.git`来当做子模块使用<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git submodule add git@github.com:lamborghini1993/Test.git Test</span><br><span class="line">正克隆到 '/home/duoyi/mygit/other/Test2'...</span><br><span class="line">remote: Enumerating objects: 8, done.</span><br><span class="line">remote: Counting objects: 100% (8/8), done.</span><br><span class="line">remote: Compressing objects: 100% (7/7), done.</span><br><span class="line">remote: Total 8 (delta 1), reused 7 (delta 0), pack-reused 0</span><br><span class="line">接收对象中: 100% (8/8), 完成.</span><br><span class="line">处理 delta 中: 100% (1/1), 完成.</span><br></pre></td></tr></table></figure></p>
 <p>添加子模块后运行<code>git status</code>, 可以看到目录有增加1个文件<code>.gitmodules</code>, 这个文件用来保存子模块的信息。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status </span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">要提交的变更：</span><br><span class="line">  （使用 "git reset HEAD &lt;文件&gt;..." 以取消暂存）</span><br><span class="line"></span><br><span class="line">	新文件：   .gitmodules</span><br><span class="line">	新文件：   Test</span><br></pre></td></tr></table></figure></p>
@@ -443,7 +621,7 @@
 </ul>
 <h1 id="修改子模块"><a href="#修改子模块" class="headerlink" title="修改子模块"></a>修改子模块</h1><ul>
 <li><p>修改子模块记得一定要先提交子模块，然后在提交父模块</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">➜  Test git:(f8b5eed) touch a.txt</span><br><span class="line">➜  Test git:(f8b5eed) ✗ git status</span><br><span class="line">头指针分离于 f8b5eed</span><br><span class="line">未跟踪的文件:</span><br><span class="line">  （使用 "git add &lt;文件&gt;..." 以包含要提交的内容）</span><br><span class="line"></span><br><span class="line">	a.txt</span><br><span class="line"></span><br><span class="line">提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）</span><br><span class="line">➜  Test git:(f8b5eed) ✗ git add *</span><br><span class="line">➜  Test git:(f8b5eed) ✗ git commit -m "test"</span><br><span class="line">[分离头指针 5cc4941] test</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 a.txt</span><br><span class="line">➜  Test git:(5cc4941) git push </span><br><span class="line">fatal: 您当前不在一个分支上。</span><br><span class="line">现在为推送当前（分离头指针）的历史，使用</span><br><span class="line"></span><br><span class="line">    git push origin HEAD:&lt;远程分支名字&gt;</span><br><span class="line"></span><br><span class="line">➜  Test git:(5cc4941) git push origin HEAD:master</span><br><span class="line">对象计数中: 2, 完成.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">压缩对象中: 100% (2/2), 完成.</span><br><span class="line">写入对象中: 100% (2/2), 250 bytes | 250.00 KiB/s, 完成.</span><br><span class="line">Total 2 (delta 0), reused 0 (delta 0)</span><br><span class="line">To github.com:lamborghini1993/Test.git</span><br><span class="line">   f8b5eed..5cc4941  HEAD -&gt; master</span><br><span class="line">➜  Test git:(5cc4941) cd ..</span><br><span class="line">➜  other git:(master) ✗ git status </span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">尚未暂存以备提交的变更：</span><br><span class="line">  （使用 "git add &lt;文件&gt;..." 更新要提交的内容）</span><br><span class="line">  （使用 "git checkout -- &lt;文件&gt;..." 丢弃工作区的改动）</span><br><span class="line"></span><br><span class="line">	修改：     Test (新提交)</span><br><span class="line"></span><br><span class="line">修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）</span><br><span class="line">➜  other git:(master) ✗ git commit -a -m "test"</span><br><span class="line">[master 757352f] test</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line">➜  other git:(master) git push</span><br><span class="line">对象计数中: 2, 完成.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">压缩对象中: 100% (2/2), 完成.</span><br><span class="line">写入对象中: 100% (2/2), 239 bytes | 239.00 KiB/s, 完成.</span><br><span class="line">Total 2 (delta 1), reused 0 (delta 0)</span><br><span class="line">remote: Resolving deltas: 100% (1/1), completed with 1 local object.</span><br><span class="line">To github.com:lamborghini1993/Test2.git</span><br><span class="line">   461dca1..757352f  master -&gt; master</span><br><span class="line">➜  other git:(master) git status</span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">无文件要提交，干净的工作区</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">➜  Test git:(f8b5eed) touch a.txt</span><br><span class="line"></span><br><span class="line">➜  Test git:(f8b5eed) ✗ git status</span><br><span class="line">头指针分离于 f8b5eed</span><br><span class="line">未跟踪的文件:</span><br><span class="line">  （使用 "git add &lt;文件&gt;..." 以包含要提交的内容）</span><br><span class="line"></span><br><span class="line">	a.txt</span><br><span class="line"></span><br><span class="line">提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）</span><br><span class="line">➜  Test git:(f8b5eed) ✗ git add *</span><br><span class="line"></span><br><span class="line">➜  Test git:(f8b5eed) ✗ git commit -m "test"</span><br><span class="line">[分离头指针 5cc4941] test</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 a.txt</span><br><span class="line"></span><br><span class="line">➜  Test git:(5cc4941) git push </span><br><span class="line">fatal: 您当前不在一个分支上。</span><br><span class="line">现在为推送当前（分离头指针）的历史，使用</span><br><span class="line"></span><br><span class="line">    git push origin HEAD:&lt;远程分支名字&gt;</span><br><span class="line"></span><br><span class="line">➜  Test git:(5cc4941) git push origin HEAD:master</span><br><span class="line">对象计数中: 2, 完成.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">压缩对象中: 100% (2/2), 完成.</span><br><span class="line">写入对象中: 100% (2/2), 250 bytes | 250.00 KiB/s, 完成.</span><br><span class="line">Total 2 (delta 0), reused 0 (delta 0)</span><br><span class="line">To github.com:lamborghini1993/Test.git</span><br><span class="line">   f8b5eed..5cc4941  HEAD -&gt; master</span><br><span class="line">➜  Test git:(5cc4941) cd ..</span><br><span class="line"></span><br><span class="line">➜  other git:(master) ✗ git status </span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">尚未暂存以备提交的变更：</span><br><span class="line">  （使用 "git add &lt;文件&gt;..." 更新要提交的内容）</span><br><span class="line">  （使用 "git checkout -- &lt;文件&gt;..." 丢弃工作区的改动）</span><br><span class="line"></span><br><span class="line">	修改：     Test (新提交)</span><br><span class="line"></span><br><span class="line">修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）</span><br><span class="line"></span><br><span class="line">➜  other git:(master) ✗ git commit -a -m "test"</span><br><span class="line">[master 757352f] test</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line"></span><br><span class="line">➜  other git:(master) git push</span><br><span class="line">对象计数中: 2, 完成.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">压缩对象中: 100% (2/2), 完成.</span><br><span class="line">写入对象中: 100% (2/2), 239 bytes | 239.00 KiB/s, 完成.</span><br><span class="line">Total 2 (delta 1), reused 0 (delta 0)</span><br><span class="line">remote: Resolving deltas: 100% (1/1), completed with 1 local object.</span><br><span class="line">To github.com:lamborghini1993/Test2.git</span><br><span class="line">   461dca1..757352f  master -&gt; master</span><br><span class="line"></span><br><span class="line">➜  other git:(master) git status</span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">无文件要提交，干净的工作区</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>注意：提交子模块时一定要指明<em>远程分支</em><code>git push origin HEAD:master</code></p>
 </li>
@@ -453,7 +631,7 @@
 <li>在子目录下执行：<code>git pull origin HEAD:master</code></li>
 </ol>
 <ul>
-<li>更新子目录时最好，一起更新，不然父目录会出现修改<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">➜  Test git:(f8b5eed) git pull origin HEAD:master</span><br><span class="line">来自 github.com:lamborghini1993/Test</span><br><span class="line">   f8b5eed..5cc4941             -&gt; master</span><br><span class="line">更新 f8b5eed..5cc4941</span><br><span class="line">Fast-forward</span><br><span class="line"> a.txt | 0</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 a.txt</span><br><span class="line">➜  Test git:(5cc4941) ls</span><br><span class="line">a.txt  新建文本文档.txt</span><br><span class="line">➜  Test git:(5cc4941) cd ..</span><br><span class="line">➜  other2 git:(master) ✗ git status </span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">尚未暂存以备提交的变更：</span><br><span class="line">  （使用 "git add &lt;文件&gt;..." 更新要提交的内容）</span><br><span class="line">  （使用 "git checkout -- &lt;文件&gt;..." 丢弃工作区的改动）</span><br><span class="line"></span><br><span class="line">	修改：     Test (新提交)</span><br><span class="line"></span><br><span class="line">修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）</span><br><span class="line">➜  other2 git:(master) ✗ git pull</span><br><span class="line">remote: Enumerating objects: 3, done.</span><br><span class="line">remote: Counting objects: 100% (3/3), done.</span><br><span class="line">remote: Compressing objects: 100% (1/1), done.</span><br><span class="line">remote: Total 2 (delta 1), reused 2 (delta 1), pack-reused 0</span><br><span class="line">展开对象中: 100% (2/2), 完成.</span><br><span class="line">来自 https://github.com/lamborghini1993/Test2</span><br><span class="line">   461dca1..757352f  master     -&gt; origin/master</span><br><span class="line">更新 461dca1..757352f</span><br><span class="line">Fast-forward</span><br><span class="line"> Test | 2 +-</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line">➜  other2 git:(master) git status </span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">无文件要提交，干净的工作区</span><br></pre></td></tr></table></figure>
+<li>更新子目录时最好，一起更新，不然父目录会出现修改<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">➜  Test git:(f8b5eed) git pull origin HEAD:master</span><br><span class="line">来自 github.com:lamborghini1993/Test</span><br><span class="line">   f8b5eed..5cc4941             -&gt; master</span><br><span class="line">更新 f8b5eed..5cc4941</span><br><span class="line">Fast-forward</span><br><span class="line"> a.txt | 0</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 a.txt</span><br><span class="line"></span><br><span class="line">➜  Test git:(5cc4941) ls</span><br><span class="line">a.txt  新建文本文档.txt</span><br><span class="line"></span><br><span class="line">➜  Test git:(5cc4941) cd ..</span><br><span class="line"></span><br><span class="line">➜  other2 git:(master) ✗ git status </span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">尚未暂存以备提交的变更：</span><br><span class="line">  （使用 "git add &lt;文件&gt;..." 更新要提交的内容）</span><br><span class="line">  （使用 "git checkout -- &lt;文件&gt;..." 丢弃工作区的改动）</span><br><span class="line"></span><br><span class="line">	修改：     Test (新提交)</span><br><span class="line"></span><br><span class="line">修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）</span><br><span class="line"></span><br><span class="line">➜  other2 git:(master) ✗ git pull</span><br><span class="line">remote: Enumerating objects: 3, done.</span><br><span class="line">remote: Counting objects: 100% (3/3), done.</span><br><span class="line">remote: Compressing objects: 100% (1/1), done.</span><br><span class="line">remote: Total 2 (delta 1), reused 2 (delta 1), pack-reused 0</span><br><span class="line">展开对象中: 100% (2/2), 完成.</span><br><span class="line">来自 https://github.com/lamborghini1993/Test2</span><br><span class="line">   461dca1..757352f  master     -&gt; origin/master</span><br><span class="line">更新 461dca1..757352f</span><br><span class="line">Fast-forward</span><br><span class="line"> Test | 2 +-</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line"></span><br><span class="line">➜  other2 git:(master) git status </span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">无文件要提交，干净的工作区</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h1 id="删除子模块"><a href="#删除子模块" class="headerlink" title="删除子模块"></a>删除子模块</h1><p>git 并不支持直接删除Submodule需要手动删除对应的文件</p>
@@ -516,7 +694,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.lamborghini1993.xyz/2018-12-02 Qt实现代码折叠/">
+    <link itemprop="mainEntityOfPage" href="lamborghini1993.xyz/2018-12-02 Qt实现代码折叠/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XiaoHao">
@@ -756,7 +934,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -767,7 +945,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -778,7 +956,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1116,6 +1294,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   
