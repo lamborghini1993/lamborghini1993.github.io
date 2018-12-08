@@ -1,5 +1,5 @@
 ---
-title: Git submodlue使用和一键配置
+title: Git submodule使用和一键配置
 date: 2018-12-05 19:42:15
 categories:
 - git
@@ -9,7 +9,7 @@ tags:
 - submodlue
 ---
 
-# Git submodlue介绍
+# Git submodule介绍
 经常碰到这种情况：当你在一个Git 项目上工作时，你需要在其中使用另外一个Git 项目。也许它是一个第三方开发的Git 库或者是你独立开发和并在多个父项目中使用的。这个情况下一个常见的问题产生了：你想将两个项目单独处理但是又需要在其中一个中使用另外一个。
 
 在Git 中你可以用子模块`submodule`来管理这些项目，`submodule`允许你将一个Git 仓库当作另外一个Git 仓库的子目录。这允许你克隆另外一个仓库到你的项目中并且保持你的提交相对独立。
@@ -90,6 +90,7 @@ $ git submodule
 - 修改子模块记得一定要先提交子模块，然后在提交父模块
 ```shell
 ➜  Test git:(f8b5eed) touch a.txt
+
 ➜  Test git:(f8b5eed) ✗ git status
 头指针分离于 f8b5eed
 未跟踪的文件:
@@ -99,10 +100,12 @@ $ git submodule
 
 提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）
 ➜  Test git:(f8b5eed) ✗ git add *
+
 ➜  Test git:(f8b5eed) ✗ git commit -m "test"
 [分离头指针 5cc4941] test
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 a.txt
+
 ➜  Test git:(5cc4941) git push 
 fatal: 您当前不在一个分支上。
 现在为推送当前（分离头指针）的历史，使用
@@ -118,6 +121,7 @@ Total 2 (delta 0), reused 0 (delta 0)
 To github.com:lamborghini1993/Test.git
    f8b5eed..5cc4941  HEAD -> master
 ➜  Test git:(5cc4941) cd ..
+
 ➜  other git:(master) ✗ git status 
 位于分支 master
 您的分支与上游分支 'origin/master' 一致。
@@ -129,9 +133,11 @@ To github.com:lamborghini1993/Test.git
 	修改：     Test (新提交)
 
 修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）
+
 ➜  other git:(master) ✗ git commit -a -m "test"
 [master 757352f] test
  1 file changed, 1 insertion(+), 1 deletion(-)
+
 ➜  other git:(master) git push
 对象计数中: 2, 完成.
 Delta compression using up to 4 threads.
@@ -141,6 +147,7 @@ Total 2 (delta 1), reused 0 (delta 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To github.com:lamborghini1993/Test2.git
    461dca1..757352f  master -> master
+
 ➜  other git:(master) git status
 位于分支 master
 您的分支与上游分支 'origin/master' 一致。
@@ -163,9 +170,12 @@ Fast-forward
  a.txt | 0
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 a.txt
+
 ➜  Test git:(5cc4941) ls
 a.txt  新建文本文档.txt
+
 ➜  Test git:(5cc4941) cd ..
+
 ➜  other2 git:(master) ✗ git status 
 位于分支 master
 您的分支与上游分支 'origin/master' 一致。
@@ -177,6 +187,7 @@ a.txt  新建文本文档.txt
 	修改：     Test (新提交)
 
 修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）
+
 ➜  other2 git:(master) ✗ git pull
 remote: Enumerating objects: 3, done.
 remote: Counting objects: 100% (3/3), done.
@@ -189,6 +200,7 @@ remote: Total 2 (delta 1), reused 2 (delta 1), pack-reused 0
 Fast-forward
  Test | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
+
 ➜  other2 git:(master) git status 
 位于分支 master
 您的分支与上游分支 'origin/master' 一致。
