@@ -1,7 +1,7 @@
 ---
 title: LeetCode-001-two-sum
 date: 2018-12-08 13:04:49
-update: 2018-12-08 13:12:32
+update: 2018-12-09 22:34:38
 categories:
 - LeetCode
 tags:
@@ -23,13 +23,13 @@ tags:
 - 时间复杂度为O(N*N)
 - 空间复杂度：O(1)
 
-
 # 解题思路二：
 竟然给定了target，我们就可以根据一个值求出另一个值
 然后在判断这个值是否在nums数组中，即可。
 - 时间复杂度为O(N*M)
 - 空间复杂度：O(1)
-```python 0
+<!--python0-->
+```python
 class Solution:
     def twoSum(self, nums, target):
         """
@@ -51,7 +51,8 @@ class Solution:
 在二的基础上，判断是否在数组中，可以遍历一次用字典存储起来，然后获取另一个值
 - 时间复杂度为O(N)
 - 空间复杂度：O(N)
-```python 1
+<!--python1-->
+```python
 class Solution:
     def twoSum(self, nums, target):
         """
