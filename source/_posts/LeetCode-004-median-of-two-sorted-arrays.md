@@ -1,12 +1,12 @@
 ---
 title: LeetCode-004-median-of-two-sorted-arrays
 date: 2018-12-09 22:34:38
-update: 2018-12-09 22:34:38
+update: 2018-12-16 14:53:30
 categories:
 - LeetCode
 tags:
 - LeetCode
-- python3
+- python
 ---
 
 # 题目地址
@@ -19,7 +19,7 @@ tags:
 你可以假设 nums1 和 nums2 不会同时为空。
 
 # 解题思路：
-1. 直接拼接两个有序列表，然后求中指，时间复杂应该是O(N+M)，但是竟然没有超时
+1. 直接拼接两个有序列表，然后求中值，时间复杂应该是O(N+M)，但是竟然没有超时
 - 时间复杂度为O(N+M)
 <!--python0-->
 ```python
@@ -56,6 +56,7 @@ class Solution:
 obj = Solution()
 print(obj.findMedianSortedArrays([1, 3], [2]))
 print(obj.findMedianSortedArrays([1, 2], [3, 4]))
+
 ```
 
 # github

@@ -1,12 +1,12 @@
 ---
 title: LeetCode-002-add-two-numbers
 date: 2018-12-09 21:11:36
-update: 2018-12-09 22:34:38
+update: 2018-12-16 14:53:30
 categories:
 - LeetCode
 tags:
 - LeetCode
-- python3
+- python
 ---
 
 # 题目地址
@@ -54,6 +54,7 @@ class Solution:
         if tmp:
             lst.append(tmp)
         return lst
+
 ```
 
 # github

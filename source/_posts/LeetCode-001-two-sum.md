@@ -1,12 +1,12 @@
 ---
 title: LeetCode-001-two-sum
 date: 2018-12-08 13:04:49
-update: 2018-12-09 22:34:38
+update: 2018-12-16 14:53:30
 categories:
 - LeetCode
 tags:
 - LeetCode
-- python3
+- python
 ---
 
 # 题目地址
@@ -45,6 +45,7 @@ class Solution:
             if i != j:
                 return [i, j]
         return None
+
 ```
 
 # 解题思路三：
@@ -67,6 +68,8 @@ class Solution:
                 return [dInfo[yValue], x]
             dInfo[xValue] = x
         return None
+
 ```
+
 # github
 - https://github.com/lamborghini1993/LeetCode
