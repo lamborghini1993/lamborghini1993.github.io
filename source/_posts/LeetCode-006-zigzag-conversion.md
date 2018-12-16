@@ -1,7 +1,7 @@
 ---
 title: LeetCode-006-zigzag-conversion
 date: 2018-12-16 14:26:07
-update: 2018-12-16 14:53:30
+update: 2018-12-16 14:58:35
 categories:
 - LeetCode
 tags:
