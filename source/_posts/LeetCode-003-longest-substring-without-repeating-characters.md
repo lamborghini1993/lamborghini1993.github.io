@@ -1,12 +1,12 @@
 ---
 title: LeetCode-003-longest-substring-without-repeating-characters
 date: 2018-12-09 22:07:56
-update: 2018-12-12 21:15:44
+update: 2018-12-19 23:08:10
 categories:
 - LeetCode
 tags:
 - LeetCode
-- python3
+- python
 ---
 
 # 题目地址
@@ -56,6 +56,7 @@ def Test():
 if __name__ == "__main__":
     Test()
     print(Solution().lengthOfLongestSubstring("aabaab!bb"))
+
 ```
 
 # github

@@ -1,12 +1,12 @@
 ---
 title: LeetCode-004-median-of-two-sorted-arrays
 date: 2018-12-09 22:34:38
-update: 2018-12-12 21:15:44
+update: 2018-12-19 23:08:10
 categories:
 - LeetCode
 tags:
 - LeetCode
-- python3
+- python
 ---
 
 # 题目地址
@@ -56,6 +56,7 @@ class Solution:
 obj = Solution()
 print(obj.findMedianSortedArrays([1, 3], [2]))
 print(obj.findMedianSortedArrays([1, 2], [3, 4]))
+
 ```
 
 # github
