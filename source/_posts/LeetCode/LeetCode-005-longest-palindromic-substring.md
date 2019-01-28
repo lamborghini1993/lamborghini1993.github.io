@@ -1,7 +1,7 @@
 ---
 title: LeetCode-005-longest-palindromic-substring
 date: 2018-12-12 21:15:44
-update: 2018-12-26 20:04:12
+update: 2019-01-28 17:34:35
 categories:
 - LeetCode
 tags:
