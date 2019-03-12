@@ -12,7 +12,7 @@ tags:
 - 想点击一个按钮，折叠/展开一个widget
 
 # 二、预览
-![fold折叠QWidget](./../../image/20190109-FoldWidget.gif)
+![fold折叠QWidget](/image/20190109-FoldWidget.gif)
 
 # 三、PyQt5代码如下：
 ```python
