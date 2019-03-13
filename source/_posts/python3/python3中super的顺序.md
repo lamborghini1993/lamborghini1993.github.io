@@ -153,8 +153,8 @@ CC.Test
 [<class '__main__.CC'>, <class '__main__.AA'>, <class '__main__.BB'>, <class 'object'>]
 ```
 
-1. 第一种A和B的__init__中都调用了super方法，此时在C中调用super，发现先输出B，再输出A。而Test2调用只输出了A。
-2. 第二种A和B的__init__中都没调用super方法，此时在C中调用super，发现只输出A。而Test2调用也只输出了A。
+1. 第一种A和B的\_\_init\_\_中都调用了super方法，此时在C中调用super，发现先输出B，再输出A。而Test2调用只输出了A。
+2. 第二种A和B的\_\_init\_\_中都没调用super方法，此时在C中调用super，发现只输出A。而Test2调用也只输出了A。
 3. 第三张我们不用super，改用cls.Method调用，这个好理解，直接按照我们调用的顺序输出，Test2也一样。
 
 
@@ -189,11 +189,11 @@ mro(C) = [C,A,B] + merge([O], [O])
 通过查找资料，发现这里的顺序是通过一个叫[MRO算法](https://www.jianshu.com/p/a08c61abe895)生成的，具体可以点击链接看看。
 
 mro算法是求继承顺序的，所以对于一
-1. 先运行A的__init__，然后A又调用super
-2. 运行B的__init__，然后B调用super
-3. 运行object的__init__。
-4. 打印输出B.__init__。
-5. 打印输出A.__init__。
-5. 打印输出C.__init__。
+1. 先运行A的\_\_init\_\_，然后A又调用super
+2. 运行B的\_\_init\_\_，然后B调用super
+3. 运行object的\_\_init\_\_。
+4. 打印输出B.\_\_init\_\_。
+5. 打印输出A.\_\_init\_\_。
+5. 打印输出C.\_\_init\_\_。
 
 对于二同理分析即可。
