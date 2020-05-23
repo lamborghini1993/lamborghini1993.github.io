@@ -1,6 +1,6 @@
 ---
 title: 安装PyQt5-tools之后designer打开失败
-date: 2020-05-13 14:32:25
+date: 2018-05-13 14:32:25
 categories:
 - python
 - PyQt5
