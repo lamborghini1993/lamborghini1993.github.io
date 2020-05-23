@@ -126,16 +126,16 @@
 
 
 
-<meta name="description" content="If you don&apos;t leave me,we will die together!">
+<meta name="description" content="人生苦短、我用python">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Xiao❤Hao">
-<meta property="og:url" content="lamborghini1993.xyz/page/2/index.html">
+<meta property="og:url" content="http://lamborghini1993.github.io/page/2/index.html">
 <meta property="og:site_name" content="Xiao❤Hao">
-<meta property="og:description" content="If you don&apos;t leave me,we will die together!">
+<meta property="og:description" content="人生苦短、我用python">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xiao❤Hao">
-<meta name="twitter:description" content="If you don&apos;t leave me,we will die together!">
+<meta name="twitter:description" content="人生苦短、我用python">
 
 
 
@@ -165,7 +165,7 @@
 
 
 
-  <link rel="canonical" href="lamborghini1993.xyz/page/2/">
+  <link rel="canonical" href="http://lamborghini1993.github.io/page/2/">
 
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="lamborghini1993.xyz/2018-12-05 Git submodule使用和一键配置/">
+    <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/python/PyQt5/PyQt5/自定义widget折叠/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XiaoHao">
@@ -318,7 +318,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018-12-05 Git submodule使用和一键配置/" itemprop="url">Git submodule使用和一键配置</a></h1>
+                <a class="post-title-link" href="/python/PyQt5/PyQt5/自定义widget折叠/" itemprop="url">自定义widget折叠</a></h1>
         
 
         <div class="post-meta">
@@ -330,225 +330,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-05T19:42:15+08:00">
-                2018-12-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/submodlue/" itemprop="url" rel="index">
-                    <span itemprop="name">submodlue</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018-12-05 Git submodule使用和一键配置/" class="leancloud_visitors" data-flag-title="Git submodule使用和一键配置">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Git-submodule介绍"><a href="#Git-submodule介绍" class="headerlink" title="Git submodule介绍"></a>Git submodule介绍</h1><p>经常碰到这种情况：当你在一个Git 项目上工作时，你需要在其中使用另外一个Git 项目。也许它是一个第三方开发的Git 库或者是你独立开发和并在多个父项目中使用的。这个情况下一个常见的问题产生了：你想将两个项目单独处理但是又需要在其中一个中使用另外一个。</p>
-<p>在Git 中你可以用子模块<code>submodule</code>来管理这些项目，<code>submodule</code>允许你将一个Git 仓库当作另外一个Git 仓库的子目录。这允许你克隆另外一个仓库到你的项目中并且保持你的提交相对独立。</p>
-<h1 id="添加子模块"><a href="#添加子模块" class="headerlink" title="添加子模块"></a>添加子模块</h1><p>本文将统一使用<a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:lamborghini1993/Test.git`来当做子模块使用<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git submodule add git@github.com:lamborghini1993/Test.git Test</span><br><span class="line">正克隆到 '/home/duoyi/mygit/other/Test2'...</span><br><span class="line">remote: Enumerating objects: 8, done.</span><br><span class="line">remote: Counting objects: 100% (8/8), done.</span><br><span class="line">remote: Compressing objects: 100% (7/7), done.</span><br><span class="line">remote: Total 8 (delta 1), reused 7 (delta 0), pack-reused 0</span><br><span class="line">接收对象中: 100% (8/8), 完成.</span><br><span class="line">处理 delta 中: 100% (1/1), 完成.</span><br></pre></td></tr></table></figure></p>
-<p>添加子模块后运行<code>git status</code>, 可以看到目录有增加1个文件<code>.gitmodules</code>, 这个文件用来保存子模块的信息。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git status </span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">要提交的变更：</span><br><span class="line">  （使用 "git reset HEAD &lt;文件&gt;..." 以取消暂存）</span><br><span class="line"></span><br><span class="line">	新文件：   .gitmodules</span><br><span class="line">	新文件：   Test</span><br></pre></td></tr></table></figure></p>
-<h1 id="查看子模块"><a href="#查看子模块" class="headerlink" title="查看子模块"></a>查看子模块</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git submodule </span><br><span class="line"> f8b5eedbdf35f99b0ac6ff1ff6f5c6d506dd4328 Test (heads/master)</span><br></pre></td></tr></table></figure>
-<h1 id="克隆包含子模块的项目"><a href="#克隆包含子模块的项目" class="headerlink" title="克隆包含子模块的项目"></a>克隆包含子模块的项目</h1><p>克隆包含子模块的项目有二种方法：一种是先克隆父项目，再更新子模块；另一种是直接递归克隆整个项目。</p>
-<ul>
-<li><p>先克隆父项目，再更新子模块:</p>
-<ol>
-<li><code>git clone https://github.com/lamborghini1993/Test2.git other</code></li>
-<li><p>查看子模块</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git submodule</span><br><span class="line">-f8b5eedbdf35f99b0ac6ff1ff6f5c6d506dd4328 Test</span><br></pre></td></tr></table></figure>
-<p> 子模块前面有一个-，说明子模块文件还未检入（空文件夹）。</p>
-</li>
-<li>初始化子模块<code>git submodule init</code>(初始化模块只需在克隆父项目后运行一次)</li>
-<li><p>更新子模块</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git submodule update</span><br><span class="line">正克隆到 '/home/duoyi/mygit/other/Test'...</span><br><span class="line">子模组路径 'Test'：检出 'f8b5eedbdf35f99b0ac6ff1ff6f5c6d506dd4328'</span><br></pre></td></tr></table></figure>
-<p> 子模块前面有一个-，说明子模块文件还未检入（空文件夹）。</p>
-</li>
-</ol>
-</li>
-<li><p>递归克隆整个项目</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git clone https://github.com/lamborghini1993/Test2.git other2 --recursive </span><br><span class="line">正克隆到 'other2'...</span><br><span class="line">remote: Enumerating objects: 6, done.</span><br><span class="line">remote: Counting objects: 100% (6/6), done.</span><br><span class="line">remote: Compressing objects: 100% (4/4), done.</span><br><span class="line">remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0</span><br><span class="line">展开对象中: 100% (6/6), 完成.</span><br><span class="line">子模组 'Test'（git@github.com:lamborghini1993/Test.git）未对路径 'Test' 注册</span><br><span class="line">正克隆到 '/home/duoyi/mygit/other2/Test'...</span><br><span class="line">remote: Enumerating objects: 8, done.        </span><br><span class="line">remote: Counting objects: 100% (8/8), done.        </span><br><span class="line">remote: Compressing objects: 100% (7/7), done.        </span><br><span class="line">接收对象中: 100% (8/8), 完成.</span><br><span class="line">处理 delta 中: 100% (1/1), 完成.</span><br><span class="line">remote: Total 8 (delta 1), reused 7 (delta 0), pack-reused 0        </span><br><span class="line">子模组路径 'Test'：检出 'f8b5eedbdf35f99b0ac6ff1ff6f5c6d506dd4328'</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>推荐使用第一种方法，因为第二种方法存在父目录克隆了，但是子目录克隆失败的情况。</p>
-</li>
-</ul>
-<h1 id="修改子模块"><a href="#修改子模块" class="headerlink" title="修改子模块"></a>修改子模块</h1><ul>
-<li><p>修改子模块记得一定要先提交子模块，然后在提交父模块</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">➜  Test git:(f8b5eed) touch a.txt</span><br><span class="line"></span><br><span class="line">➜  Test git:(f8b5eed) ✗ git status</span><br><span class="line">头指针分离于 f8b5eed</span><br><span class="line">未跟踪的文件:</span><br><span class="line">  （使用 "git add &lt;文件&gt;..." 以包含要提交的内容）</span><br><span class="line"></span><br><span class="line">	a.txt</span><br><span class="line"></span><br><span class="line">提交为空，但是存在尚未跟踪的文件（使用 "git add" 建立跟踪）</span><br><span class="line">➜  Test git:(f8b5eed) ✗ git add *</span><br><span class="line"></span><br><span class="line">➜  Test git:(f8b5eed) ✗ git commit -m "test"</span><br><span class="line">[分离头指针 5cc4941] test</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 a.txt</span><br><span class="line"></span><br><span class="line">➜  Test git:(5cc4941) git push </span><br><span class="line">fatal: 您当前不在一个分支上。</span><br><span class="line">现在为推送当前（分离头指针）的历史，使用</span><br><span class="line"></span><br><span class="line">    git push origin HEAD:&lt;远程分支名字&gt;</span><br><span class="line"></span><br><span class="line">➜  Test git:(5cc4941) git push origin HEAD:master</span><br><span class="line">对象计数中: 2, 完成.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">压缩对象中: 100% (2/2), 完成.</span><br><span class="line">写入对象中: 100% (2/2), 250 bytes | 250.00 KiB/s, 完成.</span><br><span class="line">Total 2 (delta 0), reused 0 (delta 0)</span><br><span class="line">To github.com:lamborghini1993/Test.git</span><br><span class="line">   f8b5eed..5cc4941  HEAD -&gt; master</span><br><span class="line">➜  Test git:(5cc4941) cd ..</span><br><span class="line"></span><br><span class="line">➜  other git:(master) ✗ git status </span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">尚未暂存以备提交的变更：</span><br><span class="line">  （使用 "git add &lt;文件&gt;..." 更新要提交的内容）</span><br><span class="line">  （使用 "git checkout -- &lt;文件&gt;..." 丢弃工作区的改动）</span><br><span class="line"></span><br><span class="line">	修改：     Test (新提交)</span><br><span class="line"></span><br><span class="line">修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）</span><br><span class="line"></span><br><span class="line">➜  other git:(master) ✗ git commit -a -m "test"</span><br><span class="line">[master 757352f] test</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line"></span><br><span class="line">➜  other git:(master) git push</span><br><span class="line">对象计数中: 2, 完成.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">压缩对象中: 100% (2/2), 完成.</span><br><span class="line">写入对象中: 100% (2/2), 239 bytes | 239.00 KiB/s, 完成.</span><br><span class="line">Total 2 (delta 1), reused 0 (delta 0)</span><br><span class="line">remote: Resolving deltas: 100% (1/1), completed with 1 local object.</span><br><span class="line">To github.com:lamborghini1993/Test2.git</span><br><span class="line">   461dca1..757352f  master -&gt; master</span><br><span class="line"></span><br><span class="line">➜  other git:(master) git status</span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">无文件要提交，干净的工作区</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>注意：提交子模块时一定要指明<em>远程分支</em><code>git push origin HEAD:master</code></p>
-</li>
-</ul>
-<h1 id="更新子模块"><a href="#更新子模块" class="headerlink" title="更新子模块"></a>更新子模块</h1><ol>
-<li>在父目录下执行：<code>git submodule update</code></li>
-<li>在子目录下执行：<code>git pull origin HEAD:master</code></li>
-</ol>
-<ul>
-<li>更新子目录时最好，一起更新，不然父目录会出现修改<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">➜  Test git:(f8b5eed) git pull origin HEAD:master</span><br><span class="line">来自 github.com:lamborghini1993/Test</span><br><span class="line">   f8b5eed..5cc4941             -&gt; master</span><br><span class="line">更新 f8b5eed..5cc4941</span><br><span class="line">Fast-forward</span><br><span class="line"> a.txt | 0</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 a.txt</span><br><span class="line"></span><br><span class="line">➜  Test git:(5cc4941) ls</span><br><span class="line">a.txt  新建文本文档.txt</span><br><span class="line"></span><br><span class="line">➜  Test git:(5cc4941) cd ..</span><br><span class="line"></span><br><span class="line">➜  other2 git:(master) ✗ git status </span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">尚未暂存以备提交的变更：</span><br><span class="line">  （使用 "git add &lt;文件&gt;..." 更新要提交的内容）</span><br><span class="line">  （使用 "git checkout -- &lt;文件&gt;..." 丢弃工作区的改动）</span><br><span class="line"></span><br><span class="line">	修改：     Test (新提交)</span><br><span class="line"></span><br><span class="line">修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）</span><br><span class="line"></span><br><span class="line">➜  other2 git:(master) ✗ git pull</span><br><span class="line">remote: Enumerating objects: 3, done.</span><br><span class="line">remote: Counting objects: 100% (3/3), done.</span><br><span class="line">remote: Compressing objects: 100% (1/1), done.</span><br><span class="line">remote: Total 2 (delta 1), reused 2 (delta 1), pack-reused 0</span><br><span class="line">展开对象中: 100% (2/2), 完成.</span><br><span class="line">来自 https://github.com/lamborghini1993/Test2</span><br><span class="line">   461dca1..757352f  master     -&gt; origin/master</span><br><span class="line">更新 461dca1..757352f</span><br><span class="line">Fast-forward</span><br><span class="line"> Test | 2 +-</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line"></span><br><span class="line">➜  other2 git:(master) git status </span><br><span class="line">位于分支 master</span><br><span class="line">您的分支与上游分支 'origin/master' 一致。</span><br><span class="line"></span><br><span class="line">无文件要提交，干净的工作区</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="删除子模块"><a href="#删除子模块" class="headerlink" title="删除子模块"></a>删除子模块</h1><p>git 并不支持直接删除Submodule需要手动删除对应的文件</p>
-<ol>
-<li><p>删除子模块文件夹</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">➜  other2 git:(master) git rm --cached Test </span><br><span class="line">rm 'Test'</span><br><span class="line">➜  other2 git:(master) ✗ ls</span><br><span class="line">README.md  Test</span><br><span class="line">➜  other2 git:(master) ✗ rm -rf Test</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除.gitmodules文件中相关子模块信息<br>[submodule “Test”]<br> path = Test<br> url = <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:lamborghini1993/Test.git</p>
-</li>
-<li><p>删除.git/config中的相关子模块信息<br>[submodule “Test”]<br> url = <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:lamborghini1993/Test.git</p>
-</li>
-<li><p>删除.git文件夹中的相关子模块文件</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="lamborghini1993.xyz/2018-12-02 Qt实现代码折叠/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XiaoHao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/picture/Head.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Xiao❤Hao">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018-12-02 Qt实现代码折叠/" itemprop="url">Qt实现代码折叠</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-02T13:15:07+08:00">
-                2018-12-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-08T21:07:07+08:00">
+                2019-01-08
               </time>
             
 
@@ -598,7 +381,7 @@
 
           
           
-             <span id="/2018-12-02 Qt实现代码折叠/" class="leancloud_visitors" data-flag-title="Qt实现代码折叠">
+             <span id="/python/PyQt5/PyQt5/自定义widget折叠/" class="leancloud_visitors" data-flag-title="自定义widget折叠">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -631,47 +414,1637 @@
       
         
           
-            <h1 id="一、控件"><a href="#一、控件" class="headerlink" title="一、控件"></a>一、控件</h1><ul>
-<li>QPlainTextEdit ：加载代码，以及使用 QTextBlock针对每行进行处理，比如高亮、隐藏setVisible (False)等，而QTextEdit 默认的 DocumentLayout 不支持隐藏 QTextBlock 。</li>
-<li>QPushButton：添加折叠、展开两个按钮，方便测试。</li>
+            <h1 id="一、功能说明："><a href="#一、功能说明：" class="headerlink" title="一、功能说明："></a>一、功能说明：</h1><ul>
+<li>想点击一个按钮，折叠/展开一个widget</li>
 </ul>
-<h1 id="二、界面"><a href="#二、界面" class="headerlink" title="二、界面"></a>二、界面</h1><p><img src="./../image/1533090127.png" alt="1533090127"></p>
-<ul>
-<li>只是测试改功能，所以用Qtdesigner写了个简易的界面。</li>
-<li>QPlainTextEdit 继承自定义的类CMyText。</li>
-<li>直接加载代码，然后点击折叠、展开触发操作。</li>
+<h1 id="二、预览"><a href="#二、预览" class="headerlink" title="二、预览"></a>二、预览</h1><p><img src="/image/20190109-FoldWidget.gif" alt="fold折叠QWidget"></p>
+<h1 id="三、PyQt5代码如下："><a href="#三、PyQt5代码如下：" class="headerlink" title="三、PyQt5代码如下："></a>三、PyQt5代码如下：</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">@Author: lamborghini</span></span><br><span class="line"><span class="string">@Date: 2019-01-08 21:07:07</span></span><br><span class="line"><span class="string">@Desc: 可折叠widget</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> (QPushButton, QDialog, QTreeWidget,</span><br><span class="line">                             QTreeWidgetItem, QVBoxLayout,</span><br><span class="line">                             QHBoxLayout, QFrame, QLabel,</span><br><span class="line">                             QApplication, QSpacerItem,</span><br><span class="line">                             QSizePolicy, QHeaderView)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SectionExpandButton</span><span class="params">(QPushButton)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    a QPushbutton that can expand or collapse its section</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, item, text=<span class="string">""</span>, parent=None)</span>:</span></span><br><span class="line">        super().__init__(text, parent)</span><br><span class="line">        self.section = item</span><br><span class="line">        self.clicked.connect(self.on_clicked)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">on_clicked</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        toggle expand/collapse of section by clicking</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> self.section.isExpanded():</span><br><span class="line">            self.section.setExpanded(<span class="keyword">False</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.section.setExpanded(<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CollapsibleDialog</span><span class="params">(QDialog)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    a dialog to which collapsible sections can be added;</span></span><br><span class="line"><span class="string">    subclass and reimplement define_sections() to define sections and</span></span><br><span class="line"><span class="string">        add them as (title, widget) tuples to self.sections</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        self.tree = QTreeWidget()</span><br><span class="line">        self.tree.setHeaderHidden(<span class="keyword">True</span>)</span><br><span class="line">        layout = QVBoxLayout()</span><br><span class="line">        item = QSpacerItem(<span class="number">67</span>, <span class="number">20</span>, QSizePolicy.Expanding, QSizePolicy.Minimum)</span><br><span class="line">        layout.addWidget(self.tree)</span><br><span class="line">        layout.addItem(item)</span><br><span class="line">        self.setLayout(layout)</span><br><span class="line">        self.tree.setIndentation(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">        self.sections = []</span><br><span class="line">        self.define_sections()</span><br><span class="line">        self.add_sections()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add_sections</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        adds a collapsible sections for every </span></span><br><span class="line"><span class="string">        (title, widget) tuple in self.sections</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">for</span> (title, widget) <span class="keyword">in</span> self.sections:</span><br><span class="line">            button1 = self.add_button(title)</span><br><span class="line">            section1 = self.add_widget(button1, widget)</span><br><span class="line">            button1.addChild(section1)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">define_sections</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        reimplement this to define all your sections</span></span><br><span class="line"><span class="string">        and add them as (title, widget) tuples to self.sections</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">3</span>):</span><br><span class="line">            widget = QFrame(self.tree)</span><br><span class="line">            vbox = QVBoxLayout(widget)  <span class="comment"># fold widget</span></span><br><span class="line">            <span class="keyword">for</span> y <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">                sName = <span class="string">"%s_Test%s"</span> % (x, y)</span><br><span class="line">                label = QLabel(sName, widget)</span><br><span class="line">                vbox.addWidget(label)</span><br><span class="line">            widget.setLayout(vbox)</span><br><span class="line">            title = <span class="string">"Section %s"</span> % x</span><br><span class="line">            self.sections.append((title, widget))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">define_sections2</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        reimplement this to define all your sections</span></span><br><span class="line"><span class="string">        and add them as (title, widget) tuples to self.sections</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">3</span>):</span><br><span class="line">            widget = QTreeWidget(self.tree) <span class="comment"># fold QTreeWidget</span></span><br><span class="line">            widget.setHeaderHidden(<span class="keyword">True</span>)</span><br><span class="line">            widget.header().setSectionResizeMode(QHeaderView.Stretch)</span><br><span class="line">            <span class="keyword">for</span> y <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">                sName = <span class="string">"%s_Test%s"</span> % (x, y)</span><br><span class="line">                item = QTreeWidgetItem(widget)</span><br><span class="line">                item.setText(<span class="number">0</span>, sName)</span><br><span class="line">            title = <span class="string">"Section %s"</span> % x</span><br><span class="line">            self.sections.append((title, widget))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add_button</span><span class="params">(self, title)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        creates a QTreeWidgetItem containing a button </span></span><br><span class="line"><span class="string">        to expand or collapse its section</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        item = QTreeWidgetItem()</span><br><span class="line">        self.tree.addTopLevelItem(item)</span><br><span class="line">        self.tree.setItemWidget(item, <span class="number">0</span>, SectionExpandButton(item, text=title))</span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add_widget</span><span class="params">(self, button, widget)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        creates a QWidgetItem containing the widget,</span></span><br><span class="line"><span class="string">        as child of the button-QWidgetItem</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        section = QTreeWidgetItem(button)</span><br><span class="line">        section.setDisabled(<span class="keyword">True</span>)</span><br><span class="line">        self.tree.setItemWidget(section, <span class="number">0</span>, widget)</span><br><span class="line">        <span class="keyword">return</span> section</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    window = CollapsibleDialog()</span><br><span class="line">    window.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/LeetCode/LeetCode/LeetCode-146-lru-cache/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XiaoHao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/Head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao❤Hao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/LeetCode/LeetCode/LeetCode-146-lru-cache/" itemprop="url">LeetCode-146-lru-cache</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-26T20:04:12+08:00">
+                2018-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/LeetCode/LeetCode/LeetCode-146-lru-cache/" class="leancloud_visitors" data-flag-title="LeetCode-146-lru-cache">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h1><ul>
+<li>英文：<a href="https://leetcode.com/problems/lru-cache/" target="_blank" rel="noopener">https://leetcode.com/problems/lru-cache/</a></li>
+<li>中文：<a href="https://leetcode-cn.com/problems/lru-cache/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/lru-cache/</a></li>
 </ul>
-<h1 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtWidgets, QtCore, QtGui</span><br><span class="line"></span><br><span class="line">FILE = <span class="string">r"E:\mygithub\FileCompare\test\py2ui.txt"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CMyText</span><span class="params">(QtWidgets.QPlainTextEdit)</span>:</span></span><br><span class="line">    m_Start = <span class="number">10</span></span><br><span class="line">    m_End = <span class="number">50</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></span><br><span class="line">        super(CMyText, self).__init__(parent)</span><br><span class="line">        self.InitUI()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">InitUI</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.setLineWrapMode(QtWidgets.QPlainTextEdit.NoWrap)</span><br><span class="line">        <span class="keyword">with</span> open(FILE, <span class="string">"r"</span>, encoding=<span class="string">"utf8"</span>) <span class="keyword">as</span> fp:</span><br><span class="line">            lstLines = fp.readlines()</span><br><span class="line">            lst = []</span><br><span class="line">            <span class="keyword">for</span> i, line <span class="keyword">in</span> enumerate(lstLines):</span><br><span class="line">                lst.append(<span class="string">"%s-%s"</span> % (i, line)) <span class="comment"># 添加行号，方便直观观察</span></span><br><span class="line">            self.setPlainText(<span class="string">""</span>.join(lst))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">E_Fold</span><span class="params">(self)</span>:</span></span><br><span class="line">        document = self.document()</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(self.m_Start + <span class="number">1</span>, self.m_End + <span class="number">1</span>):</span><br><span class="line">            oTextBlock = document.findBlockByNumber(x)</span><br><span class="line">            oTextBlock.setVisible(<span class="keyword">False</span>)	<span class="comment"># 隐藏</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">E_Unfold</span><span class="params">(self)</span>:</span></span><br><span class="line">        document = self.document()</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(self.m_Start + <span class="number">1</span>, self.m_End + <span class="number">1</span>):</span><br><span class="line">            oTextBlock = document.findBlockByNumber(x)</span><br><span class="line">            oTextBlock.setVisible(<span class="keyword">True</span>)		<span class="comment"># 显示</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>这是按照直观想法写出的代码，自然而然想到，隐藏直接将对应的块设置为不可见。</li>
-</ul>
-<h1 id="四、实际效果花屏问题："><a href="#四、实际效果花屏问题：" class="headerlink" title="四、实际效果花屏问题："></a>四、实际效果花屏问题：</h1><p><img src="./../image/10-31-43-8-1-3074.gif" alt="10-31-43-8-1-3074"></p>
-<ul>
-<li><p>可以看到点击之后并不会理解隐藏11-50行。</p>
-</li>
-<li><p>滑动之后才会隐藏，而且滑下去时其实还是经过了11-50行，可以看到再滑上来时，花屏了加载了好几次51行。</p>
-</li>
-<li><p>原因：</p>
-<ul>
-<li><p>点击没反应：点击虽然调用了隐藏，但是界面并没有重绘，所以还需要调用<code>self.viewport().update()</code>，展开时也一样。</p>
-</li>
-<li><p>滚动花屏：滚动时也应该调用<code>self.viewport().update()</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">scrollContentsBy</span><span class="params">(self, dx, dy)</span>:</span></span><br><span class="line">    self.viewport().update()</span><br><span class="line">    super(CMyText, self).scrollContentsBy(dx, dy)</span><br></pre></td></tr></table></figure>
-</li>
+<h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。它应该支持以下操作： 获取数据 get 和 写入数据 put 。</p>
+<p>获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。<br>写入数据 put(key, value) - 如果密钥不存在，则写入其数据值。当缓存容量达到上限时，它应该在写入新数据之前删除最近最少使用的数据值，从而为新的数据值留出空间。</p>
+<p>进阶:</p>
+<p>你是否可以在 O(1) 时间复杂度内完成这两种操作？</p>
+<p>示例:</p>
+<p>LRUCache cache = new LRUCache( 2 /<em> 缓存容量 </em>/ );</p>
+<p>cache.put(1, 1);<br>cache.put(2, 2);<br>cache.get(1);       // 返回  1<br>cache.put(3, 3);    // 该操作会使得密钥 2 作废<br>cache.get(2);       // 返回 -1 (未找到)<br>cache.put(4, 4);    // 该操作会使得密钥 1 作废<br>cache.get(1);       // 返回 -1 (未找到)<br>cache.get(3);       // 返回  3<br>cache.get(4);       // 返回  4</p>
+<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><ul>
+<li>这里其实就是想实现一个有序字典</li>
+<li>可以使用<code>list（列表）</code> + <code>unordered_map（hash表）</code>来实现</li>
+<li>get：判断是否在列表中<ul>
+<li>如果不在返回-1</li>
+<li>如果在，删除node，然后添加到列表第一位，返回结果</li>
 </ul>
 </li>
+<li>put：判断是否在列表中<ul>
+<li>如果在，删除node，然后添加到列表第一位</li>
+<li>不在，添加到列表中，如果越界删除最后一位</li>
 </ul>
-<h1 id="五、滚动的另一个问题。"><a href="#五、滚动的另一个问题。" class="headerlink" title="五、滚动的另一个问题。"></a>五、滚动的另一个问题。</h1><p><img src="./../image/11-0-40-8-1-8746.gif" alt="11-0-40-8-1-8746"></p>
+</li>
+</ul>
+<h1 id="C-代码："><a href="#C-代码：" class="headerlink" title="C++代码："></a>C++代码：</h1><!--c++0-->
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;list&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LRUCache</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">node</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        <span class="keyword">int</span> _key;</span><br><span class="line">        <span class="keyword">int</span> _val;</span><br><span class="line">        _node(<span class="keyword">int</span> k, <span class="keyword">int</span> v) : _val(v), _key(k)&#123;&#125;;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">list</span>&lt;_node&gt; _list;</span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>, <span class="built_in">list</span>&lt;_node&gt;::iterator&gt; keynode;</span><br><span class="line">    <span class="keyword">int</span> _maxsize;</span><br><span class="line">    <span class="keyword">int</span> _cursize;</span><br><span class="line">    LRUCache(<span class="keyword">int</span> capacity)</span><br><span class="line">    &#123;</span><br><span class="line">        _maxsize = capacity;</span><br><span class="line">        _cursize = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> key)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (_cursize == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (keynode.find(key) != keynode.end())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> res = keynode[key]-&gt;_val;</span><br><span class="line">            _list.erase(keynode[key]);</span><br><span class="line">            _list.push_front(_node(key, res));</span><br><span class="line">            keynode[key] = _list.begin();</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">put</span><span class="params">(<span class="keyword">int</span> key, <span class="keyword">int</span> value)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (keynode.find(key) != keynode.end())</span><br><span class="line">        &#123;</span><br><span class="line">            _list.erase(keynode[key]);</span><br><span class="line">            _list.push_front(_node(key, value));</span><br><span class="line">            keynode[key] = _list.begin();</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        _cursize++;</span><br><span class="line">        <span class="keyword">if</span> (_cursize &lt;= _maxsize)</span><br><span class="line">        &#123;</span><br><span class="line">            _list.push_front(_node(key, value));</span><br><span class="line">            keynode[key] = _list.begin();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            _list.push_front(_node(key, value));</span><br><span class="line">            <span class="keyword">int</span> rkey = (--_list.end())-&gt;_key;</span><br><span class="line">            keynode.erase(rkey);</span><br><span class="line">            keynode[key] = _list.begin();</span><br><span class="line">            _list.pop_back();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="python代码："><a href="#python代码：" class="headerlink" title="python代码："></a>python代码：</h1><ul>
+<li>python的话直接用<code>OrderedDict</code><!--python0-->
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">@Author: lamborghini</span></span><br><span class="line"><span class="string">@Date: 2018-12-26 19:54:05</span></span><br><span class="line"><span class="string">@Desc: LRU缓存机制</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LRUCache</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, capacity)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type capacity: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        self.m_Cap = capacity</span><br><span class="line">        self.m_Cnt = <span class="number">0</span></span><br><span class="line">        self.m_Info = OrderedDict()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(self, key)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type key: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> self.m_Info:</span><br><span class="line">            val = self.m_Info[key]</span><br><span class="line">            <span class="keyword">del</span> self.m_Info[key]</span><br><span class="line">            self.m_Info[key] = val</span><br><span class="line">            <span class="keyword">return</span> val</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">put</span><span class="params">(self, key, value)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type key: int</span></span><br><span class="line"><span class="string">        :type value: int</span></span><br><span class="line"><span class="string">        :rtype: void</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> self.m_Info:</span><br><span class="line">            <span class="keyword">del</span> self.m_Info[key]</span><br><span class="line">            self.m_Info[key] = value</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        self.m_Cnt += <span class="number">1</span></span><br><span class="line">        self.m_Info[key] = value</span><br><span class="line">        <span class="keyword">if</span> self.m_Cnt &gt; self.m_Cap:</span><br><span class="line">            <span class="keyword">for</span> key <span class="keyword">in</span> self.m_Info:</span><br><span class="line">                <span class="keyword">del</span> self.m_Info[key]</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Your LRUCache object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"># obj = LRUCache(capacity)</span></span><br><span class="line"><span class="comment"># param_1 = obj.get(key)</span></span><br><span class="line"><span class="comment"># obj.put(key,value)</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
+<li><a href="https://github.com/lamborghini1993/LeetCode" target="_blank" rel="noopener">https://github.com/lamborghini1993/LeetCode</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/LeetCode/LeetCode/LeetCode-124-binary-tree-maximum-path-sum/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XiaoHao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/Head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao❤Hao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/LeetCode/LeetCode/LeetCode-124-binary-tree-maximum-path-sum/" itemprop="url">LeetCode-124-binary-tree-maximum-path-sum</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-26T19:53:22+08:00">
+                2018-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/LeetCode/LeetCode/LeetCode-124-binary-tree-maximum-path-sum/" class="leancloud_visitors" data-flag-title="LeetCode-124-binary-tree-maximum-path-sum">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h1><ul>
+<li>英文：<a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/" target="_blank" rel="noopener">https://leetcode.com/problems/binary-tree-maximum-path-sum/</a></li>
+<li>中文：<a href="https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/</a></li>
+</ul>
+<h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>给定一个非空二叉树，返回其最大路径和。</p>
+<p>本题中，路径被定义为一条从树中任意节点出发，达到任意节点的序列。该路径至少包含一个节点，且不一定经过根节点。</p>
+<p>示例 1:</p>
+<p>输入: [1,2,3]</p>
+<pre><code>  1
+ / \
+2   3
+</code></pre><p>输出: 6</p>
+<p>示例 2:</p>
+<p>输入: [-10,9,20,null,null,15,7]</p>
+<pre><code>   -10
+   / \
+  9  20
+ /  \
+15   7
+</code></pre><p>输出: 42</p>
+<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><ul>
+<li>要求一条路径的最大值，可以从任意节点出发，转化为：</li>
+</ul>
+<ol>
+<li>从底层开始遍历，每次修改当前节点的值为<code>max(当前节点、当前节点+左节点、当前节点+右节点、当前节点+左右节点)</code></li>
+<li>每次遍历时并记录最大值</li>
+</ol>
+<h1 id="代码一："><a href="#代码一：" class="headerlink" title="代码一："></a>代码一：</h1><!--c++0-->
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode *left;</span><br><span class="line">    TreeNode *right;</span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) : val(x), left(<span class="literal">NULL</span>), right(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> result = INT_MIN;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxPathSum</span><span class="params">(TreeNode *root)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        DFS(root);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(TreeNode *temp)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> o, a = <span class="number">0</span>, b = <span class="number">0</span>;</span><br><span class="line">        o = temp-&gt;val;</span><br><span class="line">        <span class="keyword">if</span> (temp-&gt;left)</span><br><span class="line">        &#123;</span><br><span class="line">            DFS(temp-&gt;left);</span><br><span class="line">            a = temp-&gt;left-&gt;val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (temp-&gt;right)</span><br><span class="line">        &#123;</span><br><span class="line">            DFS(temp-&gt;right);</span><br><span class="line">            b = temp-&gt;right-&gt;val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d %d %d"</span>, o, a, b, result);</span><br><span class="line">        <span class="comment">// 求最大值</span></span><br><span class="line">        result = max(result, o);</span><br><span class="line">        result = max(result, o + a);</span><br><span class="line">        result = max(result, o + b);</span><br><span class="line">        result = max(result, o + a + b);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"----%d\n"</span>, result);</span><br><span class="line">        <span class="comment">// 算出当前节点最大的值</span></span><br><span class="line">        temp-&gt;val = max(o, o + b);</span><br><span class="line">        temp-&gt;val = max(temp-&gt;val, o + a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="优化代码二："><a href="#优化代码二：" class="headerlink" title="优化代码二："></a>优化代码二：</h1><!--c++1-->
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode *left;</span><br><span class="line">    TreeNode *right;</span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) : val(x), left(<span class="literal">NULL</span>), right(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> result = INT_MIN;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxPathSum</span><span class="params">(TreeNode *root)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        DFS(root);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">DFS</span><span class="params">(TreeNode *temp)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (temp == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> left, right;</span><br><span class="line">        left = max(<span class="number">0</span>, DFS(temp-&gt;left));</span><br><span class="line">        right = max(<span class="number">0</span>, DFS(temp-&gt;right));</span><br><span class="line">        result = max(result, temp-&gt;val + left + right);</span><br><span class="line">        <span class="keyword">return</span> max(temp-&gt;val, temp-&gt;val + max(left, right));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
+<li><a href="https://github.com/lamborghini1993/LeetCode" target="_blank" rel="noopener">https://github.com/lamborghini1993/LeetCode</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/LeetCode/LeetCode/LeetCode-062-unique-paths/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XiaoHao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/Head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao❤Hao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/LeetCode/LeetCode/LeetCode-062-unique-paths/" itemprop="url">LeetCode-062-unique-paths</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-26T19:53:05+08:00">
+                2018-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/LeetCode/LeetCode/LeetCode-062-unique-paths/" class="leancloud_visitors" data-flag-title="LeetCode-062-unique-paths">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h1><ul>
+<li>英文：<a href="https://leetcode.com/problems/unique-paths/" target="_blank" rel="noopener">https://leetcode.com/problems/unique-paths/</a></li>
+<li>中文：<a href="https://leetcode-cn.com/problems/unique-paths/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/unique-paths/</a></li>
+</ul>
+<h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。</p>
+<p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。</p>
+<p>问总共有多少条不同的路径？</p>
+<p>例如，上图是一个7 x 3 的网格。有多少可能的路径？</p>
+<p>说明：m 和 n 的值均不超过 100。</p>
+<p>示例 1:</p>
+<p>输入: m = 3, n = 2<br>输出: 3<br>解释:<br>从左上角开始，总共有 3 条路径可以到达右下角。</p>
+<ol>
+<li>向右 -&gt; 向右 -&gt; 向下</li>
+<li>向右 -&gt; 向下 -&gt; 向右</li>
+<li>向下 -&gt; 向右 -&gt; 向右</li>
+</ol>
+<p>示例 2:</p>
+<p>输入: m = 7, n = 3<br>输出: 28</p>
+<h1 id="解题思路一："><a href="#解题思路一：" class="headerlink" title="解题思路一："></a>解题思路一：</h1><ul>
+<li>可以递推出<code>dp[i][j] = dp[i - 1][j] + dp[i][j - 1];</code></li>
+<li>所以显然可以直接用动态规划解决</li>
+<li>这里其实可以优化为两个一维数组，因为每次进行for循环只和上一次有关系</li>
+</ul>
+<h1 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h1><!--c++0-->
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">uniquePaths</span><span class="params">(<span class="keyword">int</span> m, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> dp[<span class="number">110</span>][<span class="number">110</span>];</span><br><span class="line">        <span class="keyword">int</span> i, j;</span><br><span class="line">        <span class="built_in">memset</span>(dp, <span class="keyword">sizeof</span>(dp), <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">            dp[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">            dp[<span class="number">0</span>][i] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; m; i++)</span><br><span class="line">            <span class="keyword">for</span> (j = <span class="number">1</span>; j &lt; n; j++)</span><br><span class="line">                dp[i][j] = dp[i - <span class="number">1</span>][j] + dp[i][j - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">return</span> dp[m<span class="number">-1</span>][n<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, Solution().uniquePaths(<span class="number">7</span>, <span class="number">3</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="解题思路二："><a href="#解题思路二：" class="headerlink" title="解题思路二："></a>解题思路二：</h1><ul>
+<li>因为只能往下和往右，总的步数为<code>n+m-2</code></li>
+<li>所以可以转化为求在<code>n+m-2</code>中求<code>n-1</code>次往右走，或者<code>m-1</code>次往下走的情况</li>
+<li>所以结果为<code>C(n+m-2, n-1)</code>或者<code>C(n+m-2, m-1)</code></li>
+</ul>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
+<li><a href="https://github.com/lamborghini1993/LeetCode" target="_blank" rel="noopener">https://github.com/lamborghini1993/LeetCode</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/LeetCode/LeetCode/LeetCode-061-rotate-list/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XiaoHao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/Head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao❤Hao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/LeetCode/LeetCode/LeetCode-061-rotate-list/" itemprop="url">LeetCode-061-rotate-list</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-26T19:52:40+08:00">
+                2018-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/LeetCode/LeetCode/LeetCode-061-rotate-list/" class="leancloud_visitors" data-flag-title="LeetCode-061-rotate-list">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h1><ul>
+<li>英文：<a href="https://leetcode.com/problems/rotate-list/" target="_blank" rel="noopener">https://leetcode.com/problems/rotate-list/</a></li>
+<li>中文：<a href="https://leetcode-cn.com/problems/rotate-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/rotate-list/</a></li>
+</ul>
+<h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。</p>
+<p>示例 1:</p>
+<p>输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, k = 2<br>输出: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL<br>解释:<br>向右旋转 1 步: 5-&gt;1-&gt;2-&gt;3-&gt;4-&gt;NULL<br>向右旋转 2 步: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL</p>
+<p>示例 2:</p>
+<p>输入: 0-&gt;1-&gt;2-&gt;NULL, k = 4<br>输出: 2-&gt;0-&gt;1-&gt;NULL<br>解释:<br>向右旋转 1 步: 2-&gt;0-&gt;1-&gt;NULL<br>向右旋转 2 步: 1-&gt;2-&gt;0-&gt;NULL<br>向右旋转 3 步: 0-&gt;1-&gt;2-&gt;NULL<br>向右旋转 4 步: 2-&gt;0-&gt;1-&gt;NULL</p>
+<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><ol>
+<li>遍历链表，记录末位链表指针，以及链表长度:cnt</li>
+<li>因为旋转的长度可能大于链表的长度，所以需要做如下处理<code>t=(cnt - k % cnt) % cnt</code></li>
+<li>然后将前t个放到末位即可</li>
+</ol>
+<h1 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h1><!--c++0-->
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode *next;</span><br><span class="line">    ListNode(<span class="keyword">int</span> x) : val(x), next(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">rotateRight</span><span class="params">(ListNode *head, <span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        ListNode *tmp = head, *tail;</span><br><span class="line">        <span class="keyword">int</span> cnt = <span class="number">0</span>; <span class="comment">//  链表长度</span></span><br><span class="line">        <span class="keyword">while</span> (tmp)</span><br><span class="line">        &#123;</span><br><span class="line">            cnt++;</span><br><span class="line">            tail = tmp;</span><br><span class="line">            tmp = tmp-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (cnt == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        <span class="keyword">int</span> t = (cnt - k % cnt) % cnt; <span class="comment">// 移动的次数</span></span><br><span class="line">        <span class="keyword">if</span> (t == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        tail-&gt;next = head; <span class="comment">// 将链表指向头</span></span><br><span class="line">        <span class="keyword">while</span> (t--)</span><br><span class="line">        &#123;</span><br><span class="line">            tmp = head;</span><br><span class="line">            head = head-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        tmp-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
+<li><a href="https://github.com/lamborghini1993/LeetCode" target="_blank" rel="noopener">https://github.com/lamborghini1993/LeetCode</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/LeetCode/LeetCode/LeetCode-043-multiply-strings/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XiaoHao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/Head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao❤Hao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/LeetCode/LeetCode/LeetCode-043-multiply-strings/" itemprop="url">LeetCode-043-multiply-strings</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-26T19:21:23+08:00">
+                2018-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/LeetCode/LeetCode/LeetCode-043-multiply-strings/" class="leancloud_visitors" data-flag-title="LeetCode-043-multiply-strings">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h1><ul>
+<li>英文：<a href="https://leetcode.com/problems/multiply-strings/" target="_blank" rel="noopener">https://leetcode.com/problems/multiply-strings/</a></li>
+<li>中文：<a href="https://leetcode-cn.com/problems/multiply-strings/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/multiply-strings/</a></li>
+</ul>
+<h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。</p>
+<p>示例 1:</p>
+<p>输入: num1 = “2”, num2 = “3”<br>输出: “6”</p>
+<p>示例 2:</p>
+<p>输入: num1 = “123”, num2 = “456”<br>输出: “56088”</p>
+<p>说明：</p>
+<pre><code>num1 和 num2 的长度小于110。
+num1 和 num2 只包含数字 0-9。
+num1 和 num2 均不以零开头，除非是数字 0 本身。
+不能使用任何标准库的大数类型（比如 BigInteger）或直接将输入转换为整数来处理。
+</code></pre><h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><ul>
+<li>简单的说就是大数相乘</li>
+</ul>
+<ol>
+<li>将字符串转为数字用数组逆序（方便计算乘法）存起来</li>
+<li>一一相乘两个数组，然后放到新数组中，记得做进位处理<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tmp = result[i + j] + n1[i] * n2[j];</span><br><span class="line">result[i + j] = tmp % <span class="number">10</span>;</span><br><span class="line">result[i + j + <span class="number">1</span>] += tmp / <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <ul>
-<li><p>此时点击立刻隐藏了，但是滑动到10行继续玩下滑动时，滚动条正常向下滑动，代码并没有向下滑，而是过了一段时间才开始滚动。</p>
+<li>代码如下：<!--c++0-->
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> i, j, l1, l2, tmp;</span><br><span class="line">    <span class="keyword">int</span> result[<span class="number">222</span>], n1[<span class="number">111</span>], n2[<span class="number">111</span>];</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">multiply</span><span class="params">(<span class="built_in">string</span> num1, <span class="built_in">string</span> num2)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        l1 = num1.length();</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; l1; i++)</span><br><span class="line">            n1[i] = num1[l1 - <span class="number">1</span> - i] - <span class="string">'0'</span>;</span><br><span class="line">        l2 = num2.length();</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; l2; i++)</span><br><span class="line">            n2[i] = num2[l2 - <span class="number">1</span> - i] - <span class="string">'0'</span>;</span><br><span class="line">        Print(n1, l1);</span><br><span class="line">        Print(n2, l2);</span><br><span class="line">        <span class="built_in">memset</span>(result, <span class="keyword">sizeof</span>(result), <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; l1; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; l2; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                tmp = result[i + j] + n1[i] * n2[j];</span><br><span class="line">                result[i + j] = tmp % <span class="number">10</span>;</span><br><span class="line">                result[i + j + <span class="number">1</span>] += tmp / <span class="number">10</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        Print(result, l1 + l2);</span><br><span class="line">        <span class="built_in">string</span> re = <span class="string">""</span>;</span><br><span class="line">        tmp = l1 + l2;</span><br><span class="line">        <span class="keyword">while</span> (tmp &gt;= <span class="number">1</span> &amp;&amp; result[tmp] == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            tmp--; <span class="comment">//排除末位0</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (i = tmp; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">        &#123;</span><br><span class="line">            re += result[i] + <span class="string">'0'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; re &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> re;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Print</span><span class="params">(<span class="keyword">int</span> t[], <span class="keyword">int</span> size)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d"</span>, t[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s1 = <span class="string">"123"</span>, s2 = <span class="string">"456"</span>;</span><br><span class="line">    Solution().multiply(s1, s2);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>原因：猜想代码其实还是包括隐藏的行，所以滚动时还是会滚过这些隐藏的行。</p>
+</ul>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
+<li><a href="https://github.com/lamborghini1993/LeetCode" target="_blank" rel="noopener">https://github.com/lamborghini1993/LeetCode</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/LeetCode/LeetCode/LeetCode-033-search-in-rotated-sorted-array/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XiaoHao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/Head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao❤Hao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/LeetCode/LeetCode/LeetCode-033-search-in-rotated-sorted-array/" itemprop="url">LeetCode-033-search-in-rotated-sorted-array</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-24T19:53:34+08:00">
+                2018-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/LeetCode/LeetCode/LeetCode-033-search-in-rotated-sorted-array/" class="leancloud_visitors" data-flag-title="LeetCode-033-search-in-rotated-sorted-array">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h1><ul>
+<li>英文：<a href="https://leetcode.com/problems/search-in-rotated-sorted-array/" target="_blank" rel="noopener">https://leetcode.com/problems/search-in-rotated-sorted-array/</a></li>
+<li>中文：<a href="https://leetcode-cn.com/problems/search-in-rotated-sorted-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/search-in-rotated-sorted-array/</a></li>
+</ul>
+<h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>假设按照升序排序的数组在预先未知的某个点上进行了旋转。</p>
+<p>( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )。</p>
+<p>搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 -1 。</p>
+<p>你可以假设数组中不存在重复的元素。</p>
+<p>你的算法时间复杂度必须是 O(log n) 级别。</p>
+<p>示例 1:</p>
+<p>输入: nums = [4,5,6,7,0,1,2], target = 0<br>输出: 4</p>
+<p>示例 2:</p>
+<p>输入: nums = [4,5,6,7,0,1,2], target = 3<br>输出: -1</p>
+<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><p>因为是递增的一次旋转数组，所以我们也可以用二分+我们特殊的判断来做</p>
+<ul>
+<li>如果二分到是正常的递增，那么按照正常的逻辑进行</li>
+<li>否则继续按照一次旋转数组进行判断二分：<ul>
+<li>左边是正常递增，如果目标在左边，则<code>r=m-1</code>，否则<code>l=m+1</code></li>
+<li>右边是正常递增，如果目标在右边，则<code>l=m+1</code>，否则<code>r=m-1</code></li>
+</ul>
 </li>
-<li><p>解决：在折叠、展开时调用<code>document.adjustSize()</code>即可。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">E_Fold</span><span class="params">(self)</span>:</span></span><br><span class="line">    document = self.document()</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(self.m_Start + <span class="number">1</span>, self.m_End + <span class="number">1</span>):</span><br><span class="line">        oTextBlock = document.findBlockByNumber(x)</span><br><span class="line">        oTextBlock.setVisible(<span class="keyword">False</span>)</span><br><span class="line">    self.viewport().update()</span><br><span class="line">    document.adjustSize()</span><br></pre></td></tr></table></figure>
+<li>每次记得判断中数是否是寻找的值，是就直接返回<!--c++0-->
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> l, r, m;</span><br><span class="line">    <span class="keyword">bool</span> left;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums, <span class="keyword">int</span> target)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        l = <span class="number">0</span>;</span><br><span class="line">        r = nums.size() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (l &lt;= r)</span><br><span class="line">        &#123;</span><br><span class="line">            m = (l + r) / <span class="number">2</span>;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"mid %d %d %d\n"</span>, l, m, r);</span><br><span class="line">            <span class="keyword">if</span> (nums[m] == target)</span><br><span class="line">                <span class="keyword">return</span> m;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (nums[l] &lt; nums[r]) <span class="comment">// 正常递增</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[m] &gt; target)</span><br><span class="line">                    r = m - <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    l = m + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="comment">// 非正常递增</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[l] &lt;= nums[m]) <span class="comment">// 左边是正常递增</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (nums[l] &lt;= target &amp;&amp; target &lt; nums[m])</span><br><span class="line">                        r = m - <span class="number">1</span>;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                        l = m + <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="comment">// 右边是正常递增</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (nums[m] &lt; target &amp;&amp; target &lt;= nums[r])</span><br><span class="line">                        l = m + <span class="number">1</span>;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                        r = m - <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t[] = &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>&#125;;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; p;</span><br><span class="line">    <span class="keyword">int</span> iLen = <span class="keyword">sizeof</span>(t) / <span class="keyword">sizeof</span>(t[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; iLen; i++)</span><br><span class="line">        p.push_back(t[i]);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; Solution().search(p, <span class="number">2</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>此时完美运行代码折叠、展开。可以继续做自己想做的效果了。</p>
+</ul>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
+<li><a href="https://github.com/lamborghini1993/LeetCode" target="_blank" rel="noopener">https://github.com/lamborghini1993/LeetCode</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/LeetCode/LeetCode/LeetCode-015-3sum/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XiaoHao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/Head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao❤Hao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/LeetCode/LeetCode/LeetCode-015-3sum/" itemprop="url">LeetCode-015-3sum</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-24T19:53:34+08:00">
+                2018-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/LeetCode/LeetCode/LeetCode-015-3sum/" class="leancloud_visitors" data-flag-title="LeetCode-015-3sum">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h1><ul>
+<li>英文：<a href="https://leetcode.com/problems/3sum/" target="_blank" rel="noopener">https://leetcode.com/problems/3sum/</a></li>
+<li>中文：<a href="https://leetcode-cn.com/problems/3sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/3sum/</a></li>
+</ul>
+<h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。</p>
+<p>注意：答案中不可以包含重复的三元组。</p>
+<blockquote>
+<p>例如, 给定数组 nums = [-1, 0, 1, 2, -1, -4]，</p>
+<p>满足要求的三元组集合为：</p>
+<p>[<br> [-1, 0, 1<br> [-1, -1, 2]<br>]</p>
+</blockquote>
+<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><ul>
+<li>很显然进行三重遍历会超时。</li>
+<li>这里我们可以取一个数a，然后其他两个数b，c使得a+b+c=0即可</li>
+<li>找bc我们可以先进行排序，然后从两边往中间扫，使a+b+c=0</li>
+<li>这里注意记得去重（相同就跳过就行）<!--go0-->
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"sort"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">threeSum</span><span class="params">(nums []<span class="keyword">int</span>)</span> [][]<span class="title">int</span></span> &#123;</span><br><span class="line">	sort.Ints(nums)</span><br><span class="line">	<span class="keyword">var</span> items [][]<span class="keyword">int</span></span><br><span class="line">	<span class="keyword">var</span> i,j,k,s <span class="keyword">int</span></span><br><span class="line">	<span class="keyword">for</span> i = <span class="number">0</span>; i &lt; <span class="built_in">len</span>(nums); i++ &#123;</span><br><span class="line">		<span class="keyword">if</span> i != <span class="number">0</span> &amp;&amp; nums[i] &lt;= nums[i<span class="number">-1</span>] &#123;</span><br><span class="line">			<span class="keyword">continue</span>	<span class="comment">// 去重相同的</span></span><br><span class="line">		&#125;</span><br><span class="line">		j = i + <span class="number">1</span></span><br><span class="line">		k = <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">		<span class="keyword">for</span> j &lt; k &#123;</span><br><span class="line">			s = nums[i] + nums[j] + nums[k]</span><br><span class="line">			<span class="keyword">if</span> s == <span class="number">0</span> &#123;</span><br><span class="line">				tmp := []<span class="keyword">int</span>&#123;nums[i], nums[j], nums[k]&#125;</span><br><span class="line">				items = <span class="built_in">append</span>(items, tmp)</span><br><span class="line">				j += <span class="number">1</span></span><br><span class="line">				k -= <span class="number">1</span></span><br><span class="line">				<span class="keyword">for</span> j &lt; k &amp;&amp; nums[j] == nums[j<span class="number">-1</span>] &#123;	</span><br><span class="line">					j += <span class="number">1</span>	 <span class="comment">// 去重相同的</span></span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">for</span> j &lt; k &amp;&amp; nums[k] == nums[k+<span class="number">1</span>] &#123;	</span><br><span class="line">					k -= <span class="number">1</span>	<span class="comment">// 去重相同的</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> s &lt; <span class="number">0</span> &#123;</span><br><span class="line">				j += <span class="number">1</span></span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				k -= <span class="number">1</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> items</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	nums := []<span class="keyword">int</span>&#123;<span class="number">-1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">-1</span>, <span class="number">-4</span>&#125;</span><br><span class="line">	fmt.Println(threeSum(nums))</span><br><span class="line">	nums = []<span class="keyword">int</span>&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;</span><br><span class="line">	fmt.Println(threeSum(nums))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
+<li><a href="https://github.com/lamborghini1993/LeetCode" target="_blank" rel="noopener">https://github.com/lamborghini1993/LeetCode</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/LeetCode/LeetCode/LeetCode-016-3sum-closest/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XiaoHao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/Head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao❤Hao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/LeetCode/LeetCode/LeetCode-016-3sum-closest/" itemprop="url">LeetCode-016-3sum-closest</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-24T19:53:34+08:00">
+                2018-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/LeetCode/LeetCode/LeetCode-016-3sum-closest/" class="leancloud_visitors" data-flag-title="LeetCode-016-3sum-closest">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h1><ul>
+<li>英文：<a href="https://leetcode.com/problems/3sum-closest/" target="_blank" rel="noopener">https://leetcode.com/problems/3sum-closest/</a></li>
+<li>中文：<a href="https://leetcode-cn.com/problems/3sum-closest/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/3sum-closest/</a></li>
+</ul>
+<h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>给定一个包括 n 个整数的数组 nums 和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案。</p>
+<p>例如，给定数组 nums = [-1，2，1，-4], 和 target = 1.</p>
+<p>与 target 最接近的三个数的和为 2. (-1 + 2 + 1 = 2).</p>
+<h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><ul>
+<li>碰到这种问题解决方法：<ol>
+<li>排序</li>
+<li>遍历一个数据i，将三数求和变为两数求和</li>
+<li>j = i + 1, k = len - 1 从两头开始遍历</li>
+</ol>
+</li>
+<li>每次遍历和target比较大小，<ol>
+<li><code>&lt; target</code>时，j++，并且比较当前相差最小值+记录</li>
+<li><code>&gt; target</code>时，k–，并且记录当前相差最小值+记录</li>
+<li><code>= target</code>时，直接返回target<!--c++0-->
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> value, minCha = INT_MAX, t;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Compare</span><span class="params">(<span class="keyword">int</span> tmp, <span class="keyword">int</span> target)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        t = <span class="built_in">abs</span>(tmp - target);</span><br><span class="line">        <span class="keyword">if</span> (t &lt; minCha)</span><br><span class="line">        &#123;</span><br><span class="line">            minCha = t;</span><br><span class="line">            value = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">threeSumClosest</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums, <span class="keyword">int</span> target)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i, j, k, tmp;</span><br><span class="line">        sort(nums.begin(), nums.end());</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.size(); i++)</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; nums[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; nums.size(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            j = i + <span class="number">1</span>;</span><br><span class="line">            k = nums.size() - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (j &lt; k)</span><br><span class="line">            &#123;</span><br><span class="line">                tmp = nums[j] + nums[k] + nums[i];</span><br><span class="line">                <span class="keyword">if</span> (tmp &gt; target)</span><br><span class="line">                &#123;</span><br><span class="line">                    k--;</span><br><span class="line">                    Compare(tmp, target);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (tmp &lt; target)</span><br><span class="line">                &#123;</span><br><span class="line">                    Compare(tmp, target);</span><br><span class="line">                    j++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"%d %d %d %d %d\n"</span>, i, j, k, tmp, target);</span><br><span class="line">                    <span class="keyword">return</span> tmp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// int t[] = &#123;-1, 2, 1, -4&#125;;</span></span><br><span class="line">    <span class="comment">// int iLen = sizeof(t) / sizeof(t[0]);</span></span><br><span class="line">    <span class="comment">// vector&lt;int&gt; p(t, t + iLen);</span></span><br><span class="line">    <span class="comment">// Solution obj = Solution();</span></span><br><span class="line">    <span class="comment">// printf("%d\n", obj.threeSumClosest(p, 1));</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> t[] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> iLen = <span class="keyword">sizeof</span>(t) / <span class="keyword">sizeof</span>(t[<span class="number">0</span>]);</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; p(t, t + iLen);</span><br><span class="line">    Solution obj = Solution();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, obj.threeSumClosest(p, <span class="number">3</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
+<li><a href="https://github.com/lamborghini1993/LeetCode" target="_blank" rel="noopener">https://github.com/lamborghini1993/LeetCode</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/LeetCode/LeetCode/LeetCode-023-merge-k-sorted-lists/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XiaoHao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/Head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao❤Hao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/LeetCode/LeetCode/LeetCode-023-merge-k-sorted-lists/" itemprop="url">LeetCode-023-merge-k-sorted-lists</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-24T19:53:34+08:00">
+                2018-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/LeetCode/LeetCode/LeetCode-023-merge-k-sorted-lists/" class="leancloud_visitors" data-flag-title="LeetCode-023-merge-k-sorted-lists">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h1><ul>
+<li>英文：<a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank" rel="noopener">https://leetcode.com/problems/merge-k-sorted-lists/</a></li>
+<li>中文：<a href="https://leetcode-cn.com/problems/merge-k-sorted-lists/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/merge-k-sorted-lists/</a></li>
+</ul>
+<h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度。<br>示例:</p>
+<p>输入:<br>[<br>  1-&gt;4-&gt;5,<br>  1-&gt;3-&gt;4,<br>  2-&gt;6<br>]</p>
+<p>输出: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6</p>
+<h1 id="C-中-和-gt-区别"><a href="#C-中-和-gt-区别" class="headerlink" title="C++中.和-&gt;区别"></a>C++中.和-&gt;区别</h1><p>好久没写C++，现在准备捡回来</p>
+<blockquote>
+<p>c++中当定义类对象是指针对象时候，就需要用到 “-&gt;” 指向类中的成员；</p>
+<p>当定义一般对象时候时就需要用到 “.” 指向类中的成员……</p>
+</blockquote>
+<p>例如：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">MyStruct</span></span></span><br><span class="line"><span class="class">&#123;</span> </span><br><span class="line">    <span class="keyword">int</span> member; </span><br><span class="line">&#125;;</span><br><span class="line">MyStruct a, *p;</span><br><span class="line">a.member = <span class="number">1</span>;</span><br><span class="line">p-&gt;member = <span class="number">1</span>;</span><br><span class="line">(*p).member =<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>总结：</p>
+<ul>
+<li>箭头（-&gt;）：左边必须为指针；</li>
+<li>点号（.）：左边必须为实体。</li>
+</ul>
+<h1 id="解题思路一："><a href="#解题思路一：" class="headerlink" title="解题思路一："></a>解题思路一：</h1><ul>
+<li>将所有数字放到一个列表里，然后用快排<!--c++0-->
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode *next;</span><br><span class="line">    ListNode(<span class="keyword">int</span> x) : val(x), next(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;ListNode *&gt; mylists;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"></span><br><span class="line"><span class="function">ListNode *<span class="title">AddListNode</span><span class="params">(<span class="keyword">int</span> t[], <span class="keyword">int</span> size)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ListNode *head = <span class="literal">NULL</span>, *first = <span class="literal">NULL</span>, *current = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">if</span>(size==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    head = first = <span class="keyword">new</span> ListNode(t[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; size; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        current = <span class="keyword">new</span> ListNode(t[i]);</span><br><span class="line">        first-&gt;next = current;</span><br><span class="line">        first = first-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    mylists.push_back(head);</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">mergeKLists</span><span class="params">(<span class="built_in">vector</span>&lt;ListNode *&gt; &amp;lists)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        ListNode *result = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">if</span>(lists.size() == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        <span class="keyword">int</span> t[<span class="number">999999</span>], cnt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; lists.size(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">while</span> (lists[i])</span><br><span class="line">            &#123;</span><br><span class="line">                t[cnt++] = lists[i]-&gt;val;</span><br><span class="line">                lists[i] = lists[i]-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(t, t + cnt);</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; cnt; i++)</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; t[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        ListNode *head = AddListNode(t, cnt);</span><br><span class="line">        result = head;</span><br><span class="line">        <span class="keyword">while</span> (head)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; head-&gt;val &lt;&lt; <span class="string">"-&gt;"</span>;</span><br><span class="line">            head = head-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t1[] = &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> t2[] = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> t3[] = &#123;<span class="number">2</span>, <span class="number">6</span>&#125;;</span><br><span class="line">    AddListNode(t1, <span class="number">3</span>);</span><br><span class="line">    AddListNode(t2, <span class="number">3</span>);</span><br><span class="line">    AddListNode(t3, <span class="number">2</span>);</span><br><span class="line">    ListNode *result = Solution().mergeKLists(mylists);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="解题思路二："><a href="#解题思路二：" class="headerlink" title="解题思路二："></a>解题思路二：</h1><ul>
+<li>我们知道如果是将两个有序列表合并成一个有序列表就很简单了。</li>
+<li>所以可以使用归并排序的思想，每次进行两两合并。<!--c++1-->
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode *next;</span><br><span class="line">    ListNode(<span class="keyword">int</span> x) : val(x), next(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;ListNode *&gt; mylists;</span><br><span class="line"></span><br><span class="line"><span class="function">ListNode *<span class="title">AddListNode</span><span class="params">(<span class="keyword">int</span> t[], <span class="keyword">int</span> size)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ListNode *head = <span class="literal">NULL</span>, *first = <span class="literal">NULL</span>, *current = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">if</span> (size == <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    head = first = <span class="keyword">new</span> ListNode(t[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; size; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        current = <span class="keyword">new</span> ListNode(t[i]);</span><br><span class="line">        first-&gt;next = current;</span><br><span class="line">        first = first-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    mylists.push_back(head);</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> i, t, lsize;</span><br><span class="line"></span><br><span class="line">    <span class="function">ListNode *<span class="title">mergeKLists</span><span class="params">(<span class="built_in">vector</span>&lt;ListNode *&gt; &amp;lists)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (lists.size() == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        lsize = lists.size();</span><br><span class="line">        <span class="comment">// 归并合并</span></span><br><span class="line">        <span class="keyword">while</span> (lsize &gt; <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            t = (<span class="number">1</span> + lsize) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; lsize / <span class="number">2</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                lists[i] = mergeTwoLists(lists[i], lists[i + t]);</span><br><span class="line">                <span class="comment">// printf("mergeTwoLists %d:", i);</span></span><br><span class="line">                <span class="comment">// nodeprint(lists[i]);</span></span><br><span class="line">            &#125;</span><br><span class="line">            lsize = t;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> lists[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">ListNode *<span class="title">mergeTwoLists</span><span class="params">(ListNode *l1, ListNode *l2)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        ListNode *head, *cur;</span><br><span class="line">        head = cur = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        <span class="comment">// nodeprint(l1);</span></span><br><span class="line">        <span class="comment">// nodeprint(l2);</span></span><br><span class="line">        <span class="keyword">while</span> (l1 &amp;&amp; l2)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (l1-&gt;val &gt; l2-&gt;val)</span><br><span class="line">            &#123;</span><br><span class="line">                cur-&gt;next = l2;</span><br><span class="line">                l2 = l2-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                cur-&gt;next = l1;</span><br><span class="line">                l1 = l1-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            cur = cur-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (l1)</span><br><span class="line">            cur-&gt;next = l1;</span><br><span class="line">        <span class="keyword">if</span> (l2)</span><br><span class="line">            cur-&gt;next = l2;</span><br><span class="line">        <span class="comment">// nodeprint(head-&gt;next);</span></span><br><span class="line">        <span class="keyword">return</span> head-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">nodeprint</span><span class="params">(ListNode *print)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (print)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; print-&gt;val &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">            print = print-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t1[] = &#123;<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> t2[] = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> t3[] = &#123;<span class="number">2</span>, <span class="number">6</span>&#125;;</span><br><span class="line">    AddListNode(t1, <span class="number">3</span>);</span><br><span class="line">    AddListNode(t2, <span class="number">3</span>);</span><br><span class="line">    AddListNode(t3, <span class="number">2</span>);</span><br><span class="line">    ListNode *result = Solution().mergeKLists(mylists);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
+<li><a href="https://github.com/lamborghini1993/LeetCode" target="_blank" rel="noopener">https://github.com/lamborghini1993/LeetCode</a></li>
 </ul>
 
           
@@ -712,7 +2085,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -750,7 +2123,7 @@
               <img class="site-author-image" itemprop="image" src="/picture/Head.png" alt="XiaoHao">
             
               <p class="site-author-name" itemprop="name">XiaoHao</p>
-              <p class="site-description motion-element" itemprop="description">If you don't leave me,we will die together!</p>
+              <p class="site-description motion-element" itemprop="description">人生苦短、我用python</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -760,7 +2133,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -771,7 +2144,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -782,7 +2155,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -835,7 +2208,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
