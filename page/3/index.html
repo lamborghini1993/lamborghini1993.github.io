@@ -299,6 +299,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/LeetCode/LeetCode/LeetCode-011-container-with-most-water/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XiaoHao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/picture/Head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao❤Hao">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/LeetCode/LeetCode/LeetCode-011-container-with-most-water/" itemprop="url">LeetCode-011-container-with-most-water</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-19T17:44:48+08:00">
+                2018-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/LeetCode/LeetCode/LeetCode-011-container-with-most-water/" class="leancloud_visitors" data-flag-title="LeetCode-011-container-with-most-water">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h1><ul>
+<li>英文：<a href="https://leetcode.com/problems/container-with-most-water/" target="_blank" rel="noopener">https://leetcode.com/problems/container-with-most-water/</a></li>
+<li>中文：<a href="https://leetcode-cn.com/problems/container-with-most-water/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/container-with-most-water/</a></li>
+</ul>
+<h1 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h1><p>给定 n 个非负整数 a1，a2，…，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。</p>
+<p>说明：你不能倾斜容器，且 n 的值至少为 2。</p>
+<p>示例:</p>
+<ul>
+<li>输入: [1,8,6,2,5,4,8,3,7]</li>
+<li>输出: 49</li>
+</ul>
+<h1 id="解题思路一："><a href="#解题思路一：" class="headerlink" title="解题思路一："></a>解题思路一：</h1><blockquote>
+<p>相当于求：Area = Max(min(height[i], height[j]) * (j-i)) {其中0 &lt;= i &lt; j &lt; height,size()}</p>
+<p>直接暴力竟然过了<br><!--c++0--><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxArea</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;height)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> mx = <span class="number">0</span>, tmp;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; height.size(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; height.size(); j++)</span><br><span class="line">            &#123;</span><br><span class="line">                tmp = (j - i) * min(height[i], height[j]);</span><br><span class="line">                mx = max(mx, tmp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> mx;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// int main(int argc, char const *argv[])</span></span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//     vector&lt;int&gt; p;</span></span><br><span class="line"><span class="comment">//     int t[] = &#123;1, 8, 6, 2, 5, 4, 8, 3, 7&#125;;</span></span><br><span class="line"><span class="comment">//     int iLen = sizeof(t) / sizeof(t[0]);</span></span><br><span class="line"><span class="comment">//     for (int i = 0; i &lt; iLen; i++)</span></span><br><span class="line"><span class="comment">//         p.push_back(t[i]);</span></span><br><span class="line"><span class="comment">//     Solution obj = Solution();</span></span><br><span class="line"><span class="comment">//     obj.maxArea(p);</span></span><br><span class="line"><span class="comment">//     return 0;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="解题思路二："><a href="#解题思路二：" class="headerlink" title="解题思路二："></a>解题思路二：</h1><blockquote>
+<p>维护两个指针，一个从开始进行-i，一个从末尾进行-j。</p>
+<p>此时，如果height[i] &lt; height[j]，那么一定有 （i+1，j）组成的面积大于等于(i,j-1)</p>
+<p>请注意，进行第二步的时候，只是选择最优的移动一格求解最大值，并不代表，(i+1,j)大于(i,j)，所有进行每一步的时候需求与当前最大值进行比较。<br><!--c++1--><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxArea</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;height)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> mx = <span class="number">0</span>, tmp;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>, j = height.size() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j)</span><br><span class="line">        &#123;</span><br><span class="line">            tmp = (j - i) * min(height[i], height[j]);</span><br><span class="line">            mx = max(mx, tmp);</span><br><span class="line">            <span class="keyword">if</span> (height[i] &gt; height[j])</span><br><span class="line">                j--;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> mx;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// int main(int argc, char const *argv[])</span></span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//     vector&lt;int&gt; p;</span></span><br><span class="line"><span class="comment">//     int t[] = &#123;1, 8, 6, 2, 5, 4, 8, 3, 7&#125;;</span></span><br><span class="line"><span class="comment">//     int iLen = sizeof(t) / sizeof(t[0]);</span></span><br><span class="line"><span class="comment">//     for (int i = 0; i &lt; iLen; i++)</span></span><br><span class="line"><span class="comment">//         p.push_back(t[i]);</span></span><br><span class="line"><span class="comment">//     Solution obj = Solution();</span></span><br><span class="line"><span class="comment">//     printf("%d\n", obj.maxArea(p));</span></span><br><span class="line"><span class="comment">//     return 0;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><ul>
+<li><a href="https://github.com/lamborghini1993/LeetCode" target="_blank" rel="noopener">https://github.com/lamborghini1993/LeetCode</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/LeetCode/LeetCode/LeetCode-008-string-to-integer-atoi/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1883,211 +2058,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lamborghini1993.github.io/python/PyQt5/PyQt5/Qt实现代码折叠/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XiaoHao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/picture/Head.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Xiao❤Hao">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/python/PyQt5/PyQt5/Qt实现代码折叠/" itemprop="url">Qt实现代码折叠</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-02T13:15:07+08:00">
-                2018-12-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/PyQt5/" itemprop="url" rel="index">
-                    <span itemprop="name">PyQt5</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/python/PyQt5/PyQt5/Qt实现代码折叠/" class="leancloud_visitors" data-flag-title="Qt实现代码折叠">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="一、控件"><a href="#一、控件" class="headerlink" title="一、控件"></a>一、控件</h1><ul>
-<li>QPlainTextEdit ：加载代码，以及使用 QTextBlock针对每行进行处理，比如高亮、隐藏setVisible (False)等，而QTextEdit 默认的 DocumentLayout 不支持隐藏 QTextBlock 。</li>
-<li>QPushButton：添加折叠、展开两个按钮，方便测试。</li>
-</ul>
-<h1 id="二、界面"><a href="#二、界面" class="headerlink" title="二、界面"></a>二、界面</h1><p><img src="/image/1533090127.png" alt="1533090127"></p>
-<ul>
-<li>只是测试改功能，所以用Qtdesigner写了个简易的界面。</li>
-<li>QPlainTextEdit 继承自定义的类CMyText。</li>
-<li>直接加载代码，然后点击折叠、展开触发操作。</li>
-</ul>
-<h1 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a>三、代码</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtWidgets, QtCore, QtGui</span><br><span class="line"></span><br><span class="line">FILE = <span class="string">r"E:\mygithub\FileCompare\test\py2ui.txt"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CMyText</span><span class="params">(QtWidgets.QPlainTextEdit)</span>:</span></span><br><span class="line">    m_Start = <span class="number">10</span></span><br><span class="line">    m_End = <span class="number">50</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></span><br><span class="line">        super(CMyText, self).__init__(parent)</span><br><span class="line">        self.InitUI()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">InitUI</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.setLineWrapMode(QtWidgets.QPlainTextEdit.NoWrap)</span><br><span class="line">        <span class="keyword">with</span> open(FILE, <span class="string">"r"</span>, encoding=<span class="string">"utf8"</span>) <span class="keyword">as</span> fp:</span><br><span class="line">            lstLines = fp.readlines()</span><br><span class="line">            lst = []</span><br><span class="line">            <span class="keyword">for</span> i, line <span class="keyword">in</span> enumerate(lstLines):</span><br><span class="line">                lst.append(<span class="string">"%s-%s"</span> % (i, line)) <span class="comment"># 添加行号，方便直观观察</span></span><br><span class="line">            self.setPlainText(<span class="string">""</span>.join(lst))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">E_Fold</span><span class="params">(self)</span>:</span></span><br><span class="line">        document = self.document()</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(self.m_Start + <span class="number">1</span>, self.m_End + <span class="number">1</span>):</span><br><span class="line">            oTextBlock = document.findBlockByNumber(x)</span><br><span class="line">            oTextBlock.setVisible(<span class="keyword">False</span>)	<span class="comment"># 隐藏</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">E_Unfold</span><span class="params">(self)</span>:</span></span><br><span class="line">        document = self.document()</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(self.m_Start + <span class="number">1</span>, self.m_End + <span class="number">1</span>):</span><br><span class="line">            oTextBlock = document.findBlockByNumber(x)</span><br><span class="line">            oTextBlock.setVisible(<span class="keyword">True</span>)		<span class="comment"># 显示</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>这是按照直观想法写出的代码，自然而然想到，隐藏直接将对应的块设置为不可见。</li>
-</ul>
-<h1 id="四、实际效果花屏问题："><a href="#四、实际效果花屏问题：" class="headerlink" title="四、实际效果花屏问题："></a>四、实际效果花屏问题：</h1><p><img src="/image/10-31-43-8-1-3074.gif" alt="10-31-43-8-1-3074"></p>
-<ul>
-<li><p>可以看到点击之后并不会理解隐藏11-50行。</p>
-</li>
-<li><p>滑动之后才会隐藏，而且滑下去时其实还是经过了11-50行，可以看到再滑上来时，花屏了加载了好几次51行。</p>
-</li>
-<li><p>原因：</p>
-<ul>
-<li><p>点击没反应：点击虽然调用了隐藏，但是界面并没有重绘，所以还需要调用<code>self.viewport().update()</code>，展开时也一样。</p>
-</li>
-<li><p>滚动花屏：滚动时也应该调用<code>self.viewport().update()</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">scrollContentsBy</span><span class="params">(self, dx, dy)</span>:</span></span><br><span class="line">    self.viewport().update()</span><br><span class="line">    super(CMyText, self).scrollContentsBy(dx, dy)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="五、滚动的另一个问题。"><a href="#五、滚动的另一个问题。" class="headerlink" title="五、滚动的另一个问题。"></a>五、滚动的另一个问题。</h1><p><img src="/image/11-0-40-8-1-8746.gif" alt="11-0-40-8-1-8746"></p>
-<ul>
-<li><p>此时点击立刻隐藏了，但是滑动到10行继续玩下滑动时，滚动条正常向下滑动，代码并没有向下滑，而是过了一段时间才开始滚动。</p>
-</li>
-<li><p>原因：猜想代码其实还是包括隐藏的行，所以滚动时还是会滚过这些隐藏的行。</p>
-</li>
-<li><p>解决：在折叠、展开时调用<code>document.adjustSize()</code>即可。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">E_Fold</span><span class="params">(self)</span>:</span></span><br><span class="line">    document = self.document()</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(self.m_Start + <span class="number">1</span>, self.m_End + <span class="number">1</span>):</span><br><span class="line">        oTextBlock = document.findBlockByNumber(x)</span><br><span class="line">        oTextBlock.setVisible(<span class="keyword">False</span>)</span><br><span class="line">    self.viewport().update()</span><br><span class="line">    document.adjustSize()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>此时完美运行代码折叠、展开。可以继续做自己想做的效果了。</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2140,7 +2110,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2162,7 +2132,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
